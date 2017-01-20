@@ -1,0 +1,36 @@
+isim force add {/euclid/clk} 1 -radix hex -value 0 -radix hex -time 5 ns -repeat 10 ns 
+isim force add {/euclid/clr} 1 -radix hex 
+isim force add {/euclid/rdy_in} 1 -radix hex 
+run 10ns
+isim force add {/euclid/clr} 0 -radix hex 
+isim force add {/euclid/cntrd1} 00000111 -radix hex 
+isim force add {/euclid/cntrd2} 00000777 -radix hex 
+isim force add {/euclid/cntrd3} 00000999 -radix hex 
+isim force add {/euclid/din} 00000fff -radix hex 
+run 50ns
+isim force add {/euclid/clr} 0 -radix hex 
+isim force add {/euclid/cntrd1} 00000fff -radix hex 
+isim force add {/euclid/cntrd2} 00000aaa -radix hex 
+isim force add {/euclid/cntrd3} 00000777 -radix hex 
+isim force add {/euclid/din} 00000111 -radix hex 
+run 50ns
+
+
+
+
+testing -------------------
+isim force add {/testsub/data} fff -radix hex 
+isim force add {/testsub/cntrd1} 111 -radix hex 
+isim force add {/testsub/cntrd2} 777 -radix hex 
+isim force add {/testsub/cntrd3} 999 -radix hex 
+run 40ns
+isim force add {/testsub/data} 111 -radix hex 
+isim force add {/testsub/cntrd1} fff -radix hex 
+isim force add {/testsub/cntrd2} aaa -radix hex 
+isim force add {/testsub/cntrd3} 777 -radix hex  
+run 40ns 
+isim force add {/testsub/data} 111 -radix hex 
+isim force add {/testsub/cntrd1} 000 -radix hex 
+isim force add {/testsub/cntrd2} 111 -radix hex 
+isim force add {/testsub/cntrd3} 333 -radix hex  
+run 40ns 
