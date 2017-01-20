@@ -72,9 +72,7 @@
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="euclid.stx"/>
     <file xil_pn:fileType="FILE_VHDL_INSTTEMPLATE" xil_pn:name="euclid.vhi"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="euclid.xst"/>
-    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="euclid_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="euclid_isim_beh.exe"/>
-    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="euclid_isim_beh.wdb"/>
     <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
     <file xil_pn:fileType="FILE_LOG" xil_pn:name="ipcore_dir/coregen.log"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
@@ -101,17 +99,17 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1484811582" xil_pn:in_ck="5835594958497539899" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1484811582">
+    <transform xil_pn:end_ts="1484900538" xil_pn:in_ck="5835594958497539899" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1484900538">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="Main.vhd"/>
       <outfile xil_pn:name="euclid.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1483666934" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-7629036019593597479" xil_pn:start_ts="1483666934">
+    <transform xil_pn:end_ts="1484897026" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="7515671527731180552" xil_pn:start_ts="1484897026">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1483666934" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-3433559471957980873" xil_pn:start_ts="1483666934">
+    <transform xil_pn:end_ts="1484897026" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-860564817719030298" xil_pn:start_ts="1484897026">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
@@ -125,30 +123,26 @@
       <outfile xil_pn:name="ipcore_dir/sqrt3.ngc"/>
       <outfile xil_pn:name="ipcore_dir/sqrt3.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1484811582" xil_pn:in_ck="5835594958497539899" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1484811582">
+    <transform xil_pn:end_ts="1484900538" xil_pn:in_ck="5835594958497539899" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1484900538">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="Main.vhd"/>
       <outfile xil_pn:name="euclid.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1484811592" xil_pn:in_ck="-3561886673017914380" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="8913260659305574869" xil_pn:start_ts="1484811582">
+    <transform xil_pn:end_ts="1484900577" xil_pn:in_ck="-3561886673017914380" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="5110959930935509107" xil_pn:start_ts="1484900538">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="euclid_beh.prj"/>
-      <outfile xil_pn:name="euclid_isim_beh.exe"/>
+      <outfile xil_pn:name="Main_beh.prj"/>
+      <outfile xil_pn:name="Main_isim_beh.exe"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
       <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1484811592" xil_pn:in_ck="3330153264598972569" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-6413198999903254334" xil_pn:start_ts="1484811592">
+    <transform xil_pn:end_ts="1484900578" xil_pn:in_ck="3330153264598972569" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-4193191983157452736" xil_pn:start_ts="1484900577">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="euclid_isim_beh.wdb"/>
+      <outfile xil_pn:name="Main_isim_beh.wdb"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>
     </transform>

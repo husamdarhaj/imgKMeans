@@ -1,5 +1,5 @@
 ISim log file
-Running: C:\Users\husamhaj\Desktop\Personal Projects\KMeans_img\euclid_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/husamhaj/Desktop/Personal Projects/KMeans_img/euclid_isim_beh.wdb 
+Running: C:\Users\husamhaj\Documents\GitHub\imgKMeans\Main_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/husamhaj/Documents/GitHub/imgKMeans/Main_isim_beh.wdb 
 ISim P.20131013 (signature 0x7708f090)
 WARNING: A WEBPACK license was found.
 WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
@@ -10,15 +10,15 @@ Time resolution is 1 ps
 # wave add /
 # run 1000 ns
 Simulator is doing circuit initialization process.
-at 0 ps, Instance /euclid/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+at 0 ps, Instance /main/Inst_euclid/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 Finished circuit initialization process.
-# isim force add /euclid/clk 1 -radix hex -value 0 -radix hex -time 5 ns -repeat 10 ns
-# isim force add /euclid/clr 1 -radix hex
-# isim force add /euclid/rdy_in 1 -radix hex
-# run 10ns
-# isim force add /euclid/clr 0 -radix hex
-# isim force add /euclid/cntrd1 00000111 -radix hex
-# isim force add /euclid/cntrd2 00000777 -radix hex
-# isim force add /euclid/cntrd3 00000999 -radix hex
-# isim force add /euclid/din 00000fff -radix hex
-# run 50ns
+# isim force add /main/clk 1 -radix hex -value 0 -radix hex -time 7500 ps -repeat 15 ns
+# isim force add /main/clr 1 -radix hex
+# isim force add /main/do 0 -radix hex
+# run 40ns
+# isim force add /main/clr 0 -radix hex
+# run 40ns
+# isim force add /main/do 1 -radix hex
+# run 40ns
+# isim force add /main/do 0 -radix hex
+# run 400ns

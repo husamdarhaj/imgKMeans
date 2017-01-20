@@ -37,12 +37,8 @@ entity euclid is
            dist1 : out  STD_LOGIC_VECTOR (15 downto 0);
 			  dist2 : out  STD_LOGIC_VECTOR (15 downto 0);
 			  dist3 : out  STD_LOGIC_VECTOR (15 downto 0);
-			  
-           cntrd1 : in  STD_LOGIC_VECTOR (31 downto 0);
-			  cntrd2 : in  STD_LOGIC_VECTOR (31 downto 0);
-			  cntrd3 : in  STD_LOGIC_VECTOR (31 downto 0);
-			  
-           din : in  STD_LOGIC_VECTOR (31 downto 0));
+           din   : in  STD_LOGIC_VECTOR (31 downto 0)
+			  );
 end euclid;
 
 architecture Behavioral of euclid is
@@ -55,6 +51,11 @@ signal xsq1, ysq1, zsq1 : std_logic_vector(9 downto 0);
 signal xsq2, ysq2, zsq2 : std_logic_vector(9 downto 0);
 signal xsq3, ysq3, zsq3 : std_logic_vector(9 downto 0);
 signal d1,d2,d3 : std_logic_vector(13 downto 0);
+
+SIGNAL cntrd1 : STD_LOGIC_VECTOR (31 DOWNTO 0):= X"00000000"; -- black
+SIGNAL cntrd2 : STD_LOGIC_VECTOR (31 DOWNTO 0):= X"00000888"; -- grey
+SIGNAL cntrd3 : STD_LOGIC_VECTOR (31 DOWNTO 0):= X"00000fff"; -- white
+
 --signal und_sqr: STD_LOGIC_VECTOR( 15 downto 0);
 signal s_valid_out1, s_valid_out2, s_valid_out3, s_valid_out: STD_LOGIC:= '0';
 signal s_valid_in : STD_LOGIC:= '0';
@@ -179,7 +180,7 @@ state_proc2: process( clk, clr, state)
               begin
                if clk'event and clk = '1' then 
                 if( state = STANDBY ) then 
-                                       -- rdy_out <= '0';
+                                        rdy_out <= '0';
                                         s_valid_in <= '0';
 
                 elsif(state = RD_DATA) then

@@ -1,20 +1,29 @@
-Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib secureip -o C:/Users/husamhaj/Desktop/Personal Projects/KMeans_img/euclid_isim_beh.exe -prj C:/Users/husamhaj/Desktop/Personal Projects/KMeans_img/euclid_beh.prj work.euclid 
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib secureip -o C:/Users/husamhaj/Documents/GitHub/imgKMeans/Main_isim_beh.exe -prj C:/Users/husamhaj/Documents/GitHub/imgKMeans/Main_beh.prj work.Main 
 ISim P.20131013 (signature 0x7708f090)
 Number of CPUs detected in this system: 4
 Turning on mult-threading, number of parallel sub-compilation jobs: 8 
 Determining compilation order of HDL files
-Parsing VHDL file "C:/Users/husamhaj/Desktop/Personal Projects/KMeans_img/ipcore_dir/sqrt.vhd" into library work
-Parsing VHDL file "C:/Users/husamhaj/Desktop/Personal Projects/KMeans_img/ipcore_dir/sqrt2.vhd" into library work
-Parsing VHDL file "C:/Users/husamhaj/Desktop/Personal Projects/KMeans_img/ipcore_dir/sqrt3.vhd" into library work
-Parsing VHDL file "C:/Users/husamhaj/Desktop/Personal Projects/KMeans_img/euclid.vhd" into library work
+Parsing VHDL file "C:/Users/husamhaj/Documents/GitHub/imgKMeans/ipcore_dir/RGB_Ram.vhd" into library work
+Parsing VHDL file "C:/Users/husamhaj/Documents/GitHub/imgKMeans/ipcore_dir/sqrt.vhd" into library work
+Parsing VHDL file "C:/Users/husamhaj/Documents/GitHub/imgKMeans/ipcore_dir/sqrt2.vhd" into library work
+Parsing VHDL file "C:/Users/husamhaj/Documents/GitHub/imgKMeans/ipcore_dir/sqrt3.vhd" into library work
+Parsing VHDL file "C:/Users/husamhaj/Documents/GitHub/imgKMeans/euclid.vhd" into library work
+Parsing VHDL file "C:/Users/husamhaj/Documents/GitHub/imgKMeans/Main.vhd" into library work
 Starting static elaboration
 Completed static elaboration
 Compiling package standard
 Compiling package std_logic_1164
 Compiling package std_logic_arith
-Compiling package std_logic_signed
+Compiling package std_logic_unsigned
 Compiling package numeric_std
+Compiling package std_logic_signed
 Compiling package textio
+Compiling package std_logic_textio
+Compiling architecture output_stage_behavioral of entity BLK_MEM_GEN_V7_3_output_stage [\BLK_MEM_GEN_V7_3_output_stage("...]
+Compiling architecture softecc_output_reg_stage_behavioral of entity BLK_MEM_GEN_V7_3_softecc_output_reg_stage [\BLK_MEM_GEN_V7_3_softecc_output...]
+Compiling architecture mem_module_behavioral of entity BLK_MEM_GEN_V7_3_mem_module [\BLK_MEM_GEN_V7_3_mem_module("bl...]
+Compiling architecture behavioral of entity BLK_MEM_GEN_V7_3 [\BLK_MEM_GEN_V7_3("blk_mem_gen_v...]
+Compiling architecture rgb_ram_a of entity RGB_Ram [rgb_ram_default]
 Compiling package bip_utils_pkg_v2_0
 Compiling package xbip_pipe_v2_0_xst_comp
 Compiling package axi_utils_pkg_v1_1
@@ -32,10 +41,11 @@ Compiling architecture behavioral of entity cordic_v5_0 [\cordic_v5_0(2,6,0,2,"a
 Compiling architecture sqrt_a of entity sqrt [sqrt_default]
 Compiling architecture sqrt2_a of entity sqrt2 [sqrt2_default]
 Compiling architecture sqrt3_a of entity sqrt3 [sqrt3_default]
-Compiling architecture behavioral of entity euclid
+Compiling architecture behavioral of entity euclid [euclid_default]
+Compiling architecture behavioral of entity main
 Time Resolution for simulation is 1ps.
 Waiting for 14 sub-compilation(s) to finish...
-Compiled 31 VHDL Units
-Built simulation executable C:/Users/husamhaj/Desktop/Personal Projects/KMeans_img/euclid_isim_beh.exe
-Fuse Memory Usage: 48192 KB
-Fuse CPU Usage: 1483 ms
+Compiled 45 VHDL Units
+Built simulation executable C:/Users/husamhaj/Documents/GitHub/imgKMeans/Main_isim_beh.exe
+Fuse Memory Usage: 430856 KB
+Fuse CPU Usage: 32031 ms

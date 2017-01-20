@@ -56,10 +56,11 @@ END COMPONENT;
 		clk : IN std_logic;
 		clr : IN std_logic;
 		rdy_in : IN std_logic;
-		cntrd : IN std_logic_vector(31 downto 0);
 		din : IN std_logic_vector(31 downto 0);          
 		rdy_out : OUT std_logic;
-		dist : OUT std_logic_vector(7 downto 0)
+		dist1 : OUT std_logic_vector(15 downto 0);
+		dist2 : OUT std_logic_vector(15 downto 0);
+		dist3 : OUT std_logic_vector(15 downto 0)
 		);
 	END COMPONENT;
 
@@ -72,20 +73,18 @@ SIGNAL RGB_wea: STD_LOGIC_VECTOR( 3 DOWNTO 0):= x"0";
 SIGNAL RGB_dina: STD_LOGIC_VECTOR( 31 DOWNTO 0):= x"00000000";
 SIGNAL RGB_douta: STD_LOGIC_VECTOR( 31 DOWNTO 0):= x"00000000";
 
-SIGNAL i_cnt : STD_LOGIC_VECTOR (31 DOWNTO 0):= x"00000000";
-SIGNAL cent1 : STD_LOGIC_VECTOR (32 DOWNTO 0):= X"000"; -- black
-SIGNAL cent2 : STD_LOGIC_VECTOR (32 DOWNTO 0):= X"888"; -- grey
-SIGNAL cent3 : STD_LOGIC_VECTOR (32 DOWNTO 0):= X"fff"; -- white
+--SIGNAL i_cnt : STD_LOGIC_VECTOR (31 DOWNTO 0):= x"00000000";
 
 SIGNAL n_cnt : STD_LOGIC_VECTOR (31 DOWNTO 0):= x"00000000";
-SIGNAL euc_dist : STD_LOGIC_VECTOR(7 DOWNTO 0):= x"00";
-SIGNAL euc_cntrd, euc_din : STD_LOGIC_VECTOR(31 DOWNTO 0):= x"00000000";
+SIGNAL euc_dist1 : STD_LOGIC_VECTOR(15 DOWNTO 0):= x"0000";
+SIGNAL euc_dist2 : STD_LOGIC_VECTOR(15 DOWNTO 0):= x"0000";
+SIGNAL euc_dist3 : STD_LOGIC_VECTOR(15 DOWNTO 0):= x"0000";
+SIGNAL euc_din : STD_LOGIC_VECTOR(31 DOWNTO 0):= x"00000000";
 SIGNAL euc_dist_cpy : STD_LOGIC_VECTOR(31 DOWNTO 0):= x"00000000";
 SIGNAL euc_rdy_in : STD_LOGIC;
 SIGNAL euc_rdy_out: STD_LOGIC;
 TYPE StateType IS ( 
                     ST_IDLE,
-                    ST_GEN_CNTRD,
                     ST_FTCH,
 						  ST_SND,
 						  
@@ -106,17 +105,15 @@ grp_out <= x"0000";
 							
                       CASE state IS 
                         WHEN ST_IDLE => IF ( do = '0') THEN 
-                              state <= ST_GEN_CNTRD; 
+                              state <= ST_FTCH; 
 		                     ELSE
                               state <= ST_IDLE; END IF;
-										
-                        WHEN ST_GEN_CNTRD =>  state <= ST_FTCH; 
 										
                         WHEN ST_FTCH => state <= ST_SND; 
 		                                   
 								WHEN ST_SND => if( euc_rdy_out = '1') then state <= ST_CMPR; else state <= ST_SND; END IF;
-								when ST_CMPR => if(n_cnt = n - x"4") then state <= ST_FNL; else state <= ST_CMPR; END IF;
-								WHEN ST_FNL  => state <= ST_IDLE;
+								when ST_CMPR =>  state <= ST_FNL; 
+								WHEN ST_FNL  =>if(n_cnt >= n - x"4") then state <= ST_IDLE; else state <= ST_FTCH; END IF;
 
 
                        END CASE;
@@ -124,9 +121,9 @@ grp_out <= x"0000";
                    END PROCESS;
                        
 
-n_cnt    :PROCESS(clk, clr, state)
+n_cnt_proc :PROCESS(clk, clr, state)
                BEGIN
-                    IF(clr = '1' or state = ST_IDLE) THEN 
+                    IF( state = ST_IDLE) THEN 
                           n_cnt <= x"00000000" ; 								  
                     ELSIF(clk'event AND clk = '1') THEN
                        IF( state = ST_CMPR ) THEN  
@@ -139,31 +136,21 @@ n_cnt    :PROCESS(clk, clr, state)
                           END IF;									
                        END IF;
                     END IF;
-               END PROCESS;					
+               END PROCESS;
+					
+euc_din <= RGB_douta;
+RGB_addra <= n_cnt ;
 
 state_PROCESS2 :PROCESS( clk, state)
                  BEGIN
                       IF(clk'event AND clk = '1') THEN
                        IF( state = ST_IDLE) THEN
-                          c_wea <= x"0";
                           RGB_wea <= x"0";
-                        
-                        ELSIF( state = ST_GEN_CNTRD) THEN
-                            c_wea <= x"f";
-                            c_addra <=  i_cnt;
-                            RGB_addra <= i_cnt(26 DOWNTO 0) & "00000";
-                            c_dina <= RGB_douta;
-
-                         ELSIF( state = ST_FTCH) THEN 
-                            c_wea <= x"0";
+                          
 								 ELSIF( state = ST_SND) then
-								     RGB_addra <= n_cnt ;
-									  c_addra <= k_cnt;
-									  euc_cntrd <= c_douta;
-									  euc_din <= RGB_douta;
-								 ELSIF( state <= ST_CMPR) then
-								    euc_rdy_in <= '1';  
-								 
+								     euc_rdy_in <= '1';
+								 ELSIF( state = ST_CMPR ) THEN
+								      euc_rdy_in <= '0';
                          END IF;
                        END IF;
                    END PROCESS;
@@ -184,8 +171,9 @@ your_instance_name : RGB_Ram
 		clr => clr,
 		rdy_in => euc_rdy_in ,
 		rdy_out => euc_rdy_out ,
-		dist => euc_dist ,
-		cntrd => euc_cntrd,
+		dist1 => euc_dist1 ,
+		dist2 => euc_dist2 ,
+		dist3 => euc_dist3 ,
 		din => euc_din
 	);
 END Behavioral;
