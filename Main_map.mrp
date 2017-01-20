@@ -1,0 +1,1893 @@
+Release 14.7 Map P.20131013 (nt64)
+Xilinx Mapping Report File for Design 'Main'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc7a100t-csg324-1 -w -logic_opt off -ol
+high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off
+-power off -o Main_map.ncd Main.ngd Main.pcf 
+Target Device  : xc7a100t
+Target Package : csg324
+Target Speed   : -1
+Mapper Version : artix7 -- $Revision: 1.55 $
+Mapped Date    : Sun Aug 07 21:43:36 2016
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:   25
+Slice Logic Utilization:
+  Number of Slice Registers:                     0 out of 126,800    0%
+  Number of Slice LUTs:                          0 out of  63,400    0%
+
+Slice Logic Distribution:
+  Number of occupied Slices:                     0 out of  15,850    0%
+  Number of LUT Flip Flop pairs used:            0
+
+IO Utilization:
+  Number of bonded IOBs:                        16 out of     210    7%
+
+Specific Feature Utilization:
+  Number of RAMB36E1/FIFO36E1s:                  0 out of     135    0%
+  Number of RAMB18E1/FIFO18E1s:                  0 out of     270    0%
+  Number of BUFG/BUFGCTRLs:                      0 out of      32    0%
+  Number of IDELAYE2/IDELAYE2_FINEDELAYs:        0 out of     300    0%
+  Number of ILOGICE2/ILOGICE3/ISERDESE2s:        0 out of     300    0%
+  Number of ODELAYE2/ODELAYE2_FINEDELAYs:        0
+  Number of OLOGICE2/OLOGICE3/OSERDESE2s:        0 out of     300    0%
+  Number of PHASER_IN/PHASER_IN_PHYs:            0 out of      24    0%
+  Number of PHASER_OUT/PHASER_OUT_PHYs:          0 out of      24    0%
+  Number of BSCANs:                              0 out of       4    0%
+  Number of BUFHCEs:                             0 out of      96    0%
+  Number of BUFRs:                               0 out of      24    0%
+  Number of CAPTUREs:                            0 out of       1    0%
+  Number of DNA_PORTs:                           0 out of       1    0%
+  Number of DSP48E1s:                            0 out of     240    0%
+  Number of EFUSE_USRs:                          0 out of       1    0%
+  Number of FRAME_ECCs:                          0 out of       1    0%
+  Number of IBUFDS_GTE2s:                        0 out of       4    0%
+  Number of ICAPs:                               0 out of       2    0%
+  Number of IDELAYCTRLs:                         0 out of       6    0%
+  Number of IN_FIFOs:                            0 out of      24    0%
+  Number of MMCME2_ADVs:                         0 out of       6    0%
+  Number of OUT_FIFOs:                           0 out of      24    0%
+  Number of PCIE_2_1s:                           0 out of       1    0%
+  Number of PHASER_REFs:                         0 out of       6    0%
+  Number of PHY_CONTROLs:                        0 out of       6    0%
+  Number of PLLE2_ADVs:                          0 out of       6    0%
+  Number of STARTUPs:                            0 out of       1    0%
+  Number of XADCs:                               0 out of       1    0%
+
+Peak Memory Usage:  939 MB
+Total REAL time to MAP completion:  21 secs 
+Total CPU time to MAP completion:   20 secs 
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Timing Report
+Section 11 - Configuration String Information
+Section 12 - Control Set Information
+Section 13 - Utilization by Hierarchy
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+WARNING:LIT:701 - PAD symbol "clk" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "clk" is not constrained (LOC) to a specific
+   location.
+WARNING:MapLib:701 - Signal k<3> connected to top level port k<3> has been
+   removed.
+WARNING:MapLib:701 - Signal k<2> connected to top level port k<2> has been
+   removed.
+WARNING:MapLib:701 - Signal k<1> connected to top level port k<1> has been
+   removed.
+WARNING:MapLib:701 - Signal k<0> connected to top level port k<0> has been
+   removed.
+WARNING:MapLib:701 - Signal clr connected to top level port clr has been
+   removed.
+WARNING:MapLib:701 - Signal do connected to top level port do has been removed.
+WARNING:MapLib:701 - Signal clk connected to top level port clk has been
+   removed.
+WARNING:PhysDesignRules:2452 - The IOB grp_out<0> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB grp_out<1> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB grp_out<2> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB grp_out<3> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB grp_out<4> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB grp_out<5> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB grp_out<6> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB grp_out<7> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB grp_out<8> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB grp_out<9> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB grp_out<10> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB grp_out<11> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB grp_out<12> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB grp_out<13> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB grp_out<14> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+WARNING:PhysDesignRules:2452 - The IOB grp_out<15> is either not constrained
+   (LOC) to a specific location and/or has an undefined I/O Standard
+   (IOSTANDARD). This condition may seriously affect the device and will be an
+   error in bitstream creation. It should be corrected by properly specifying
+   the pin location and I/O Standard.
+
+Section 3 - Informational
+-------------------------
+INFO:LIT:243 - Logical network cntrd_instant/douta<15> has no load.
+INFO:LIT:395 - The above info message is repeated 15 more times for the
+   following (max. 5 shown):
+   cntrd_instant/douta<14>,
+   cntrd_instant/douta<13>,
+   cntrd_instant/douta<12>,
+   cntrd_instant/douta<11>,
+   cntrd_instant/douta<10>
+   To see the details of these info messages, please use the -detail switch.
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs.
+INFO:Pack:1716 - Initializing temperature to 85.000 Celsius. (default - Range:
+   0.000 to 85.000 Celsius)
+INFO:Pack:1720 - Initializing voltage to 0.950 Volts. (default - Range: 0.950 to
+   1.050 Volts)
+INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
+   (.mrp).
+INFO:Pack:1650 - Map created a placed design.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+ 225 block(s) removed
+   1 block(s) optimized away
+ 410 signal(s) removed
+
+Section 5 - Removed Logic
+-------------------------
+
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+The signal "clk_BUFGP/IBUFG" is sourceless and has been removed.
+ Sourceless block "clk_BUFGP/BUFG" (CKBUF) removed.
+  The signal "clk_BUFGP" is sourceless and has been removed.
+   Sourceless block "c_wea_0" (FF) removed.
+    The signal "c_wea_0" is sourceless and has been removed.
+   Sourceless block "c_addra_1" (FF) removed.
+    The signal "c_addra<1>" is sourceless and has been removed.
+   Sourceless block "c_addra_2" (FF) removed.
+    The signal "c_addra<2>" is sourceless and has been removed.
+   Sourceless block "c_addra_3" (FF) removed.
+    The signal "c_addra<3>" is sourceless and has been removed.
+   Sourceless block "c_addra_4" (FF) removed.
+    The signal "c_addra<4>" is sourceless and has been removed.
+   Sourceless block "c_dina_0" (FF) removed.
+    The signal "c_dina<0>" is sourceless and has been removed.
+   Sourceless block "c_dina_1" (FF) removed.
+    The signal "c_dina<1>" is sourceless and has been removed.
+   Sourceless block "c_dina_2" (FF) removed.
+    The signal "c_dina<2>" is sourceless and has been removed.
+   Sourceless block "c_dina_3" (FF) removed.
+    The signal "c_dina<3>" is sourceless and has been removed.
+   Sourceless block "c_dina_4" (FF) removed.
+    The signal "c_dina<4>" is sourceless and has been removed.
+   Sourceless block "c_dina_5" (FF) removed.
+    The signal "c_dina<5>" is sourceless and has been removed.
+   Sourceless block "c_dina_6" (FF) removed.
+    The signal "c_dina<6>" is sourceless and has been removed.
+   Sourceless block "c_dina_7" (FF) removed.
+    The signal "c_dina<7>" is sourceless and has been removed.
+   Sourceless block "c_dina_8" (FF) removed.
+    The signal "c_dina<8>" is sourceless and has been removed.
+   Sourceless block "c_dina_9" (FF) removed.
+    The signal "c_dina<9>" is sourceless and has been removed.
+   Sourceless block "c_dina_10" (FF) removed.
+    The signal "c_dina<10>" is sourceless and has been removed.
+   Sourceless block "c_dina_11" (FF) removed.
+    The signal "c_dina<11>" is sourceless and has been removed.
+   Sourceless block "c_dina_12" (FF) removed.
+    The signal "c_dina<12>" is sourceless and has been removed.
+   Sourceless block "c_dina_13" (FF) removed.
+    The signal "c_dina<13>" is sourceless and has been removed.
+   Sourceless block "c_dina_14" (FF) removed.
+    The signal "c_dina<14>" is sourceless and has been removed.
+   Sourceless block "c_dina_15" (FF) removed.
+    The signal "c_dina<15>" is sourceless and has been removed.
+   Sourceless block "state_FSM_FFd2" (FF) removed.
+    The signal "state_FSM_FFd2" is sourceless and has been removed.
+     Sourceless block "state_FSM_FFd1" (FF) removed.
+      The signal "state_FSM_FFd1" is sourceless and has been removed.
+       Sourceless block "state_FSM_FFd2-In1_lut" (ROM) removed.
+        The signal "state_FSM_FFd2-In1_lut" is sourceless and has been removed.
+         Sourceless block "state_FSM_FFd2-In1_cy1" (MUX) removed.
+          The signal "state_FSM_FFd2-In" is sourceless and has been removed.
+       Sourceless block "state_FSM_FFd2-In1_cy_rt" (ROM) removed.
+        The signal "state_FSM_FFd2-In1_cy_rt" is sourceless and has been removed.
+         Sourceless block "state_FSM_FFd2-In1_cy" (MUX) removed.
+          The signal "Mcompar_RGB_addra[16]_state[1]_AND_1_o_cy<4>_l1" is sourceless and
+has been removed.
+     Sourceless block "_n0053_inv1" (ROM) removed.
+      The signal "_n0053_inv" is sourceless and has been removed.
+   Sourceless block "RGB_addra_1" (FF) removed.
+    The signal "RGB_addra<1>" is sourceless and has been removed.
+     Sourceless block "Mcompar_RGB_addra[16]_state[1]_AND_1_o_lut<0>" (ROM) removed.
+      The signal "Mcompar_RGB_addra[16]_state[1]_AND_1_o_lut<0>" is sourceless and has
+been removed.
+       Sourceless block "Mcompar_RGB_addra[16]_state[1]_AND_1_o_cy<0>" (MUX) removed.
+        The signal "Mcompar_RGB_addra[16]_state[1]_AND_1_o_cy<0>" is sourceless and has
+been removed.
+         Sourceless block "Mcompar_RGB_addra[16]_state[1]_AND_1_o_cy<1>" (MUX) removed.
+          The signal "Mcompar_RGB_addra[16]_state[1]_AND_1_o_cy<1>" is sourceless and has
+been removed.
+           Sourceless block "Mcompar_RGB_addra[16]_state[1]_AND_1_o_cy<2>" (MUX) removed.
+            The signal "Mcompar_RGB_addra[16]_state[1]_AND_1_o_cy<2>" is sourceless and has
+been removed.
+             Sourceless block "Mcompar_RGB_addra[16]_state[1]_AND_1_o_cy<3>" (MUX) removed.
+              The signal "Mcompar_RGB_addra[16]_state[1]_AND_1_o_cy<3>" is sourceless and has
+been removed.
+               Sourceless block "Mcompar_RGB_addra[16]_state[1]_AND_1_o_cy<4>" (MUX) removed.
+                The signal "Mcompar_RGB_addra[16]_state[1]_AND_1_o_cy<4>" is sourceless and has
+been removed.
+                 Sourceless block "RGB_addra_1_rstpot" (ROM) removed.
+                  The signal "RGB_addra_1_rstpot" is sourceless and has been removed.
+                 Sourceless block "RGB_addra_2_rstpot" (ROM) removed.
+                  The signal "RGB_addra_2_rstpot" is sourceless and has been removed.
+                   Sourceless block "RGB_addra_2" (FF) removed.
+                    The signal "RGB_addra<2>" is sourceless and has been removed.
+                     Sourceless block "Mcompar_RGB_addra[16]_state[1]_AND_1_o_lut<1>" (ROM) removed.
+                      The signal "Mcompar_RGB_addra[16]_state[1]_AND_1_o_lut<1>" is sourceless and has
+been removed.
+                     Sourceless block "Maccum_RGB_addra_cy<2>_rt" (ROM) removed.
+                      The signal "Maccum_RGB_addra_cy<2>_rt" is sourceless and has been removed.
+                       Sourceless block "Maccum_RGB_addra_cy<2>" (MUX) removed.
+                        The signal "Maccum_RGB_addra_cy<2>" is sourceless and has been removed.
+                         Sourceless block "Maccum_RGB_addra_cy<3>" (MUX) removed.
+                          The signal "Maccum_RGB_addra_cy<3>" is sourceless and has been removed.
+                           Sourceless block "Maccum_RGB_addra_xor<4>" (XOR) removed.
+                            The signal "Result<4>" is sourceless and has been removed.
+                             Sourceless block "RGB_addra_4_rstpot" (ROM) removed.
+                              The signal "RGB_addra_4_rstpot" is sourceless and has been removed.
+                               Sourceless block "RGB_addra_4" (FF) removed.
+                                The signal "RGB_addra<4>" is sourceless and has been removed.
+                                 Sourceless block "Maccum_RGB_addra_xor<4>_rt" (ROM) removed.
+                                  The signal "Maccum_RGB_addra_xor<4>_rt" is sourceless and has been removed.
+                                 Sourceless block "Mcompar_RGB_addra[16]_state[1]_AND_1_o_lutdi1" (ROM) removed.
+                                  The signal "Mcompar_RGB_addra[16]_state[1]_AND_1_o_lutdi1" is sourceless and has
+been removed.
+                         Sourceless block "Maccum_RGB_addra_xor<3>" (XOR) removed.
+                          The signal "Result<3>" is sourceless and has been removed.
+                           Sourceless block "RGB_addra_3_rstpot" (ROM) removed.
+                            The signal "RGB_addra_3_rstpot" is sourceless and has been removed.
+                             Sourceless block "RGB_addra_3" (FF) removed.
+                              The signal "RGB_addra<3>" is sourceless and has been removed.
+                               Sourceless block "Maccum_RGB_addra_cy<3>_rt" (ROM) removed.
+                                The signal "Maccum_RGB_addra_cy<3>_rt" is sourceless and has been removed.
+                       Sourceless block "Maccum_RGB_addra_xor<2>" (XOR) removed.
+                        The signal "Result<2>" is sourceless and has been removed.
+     Sourceless block "Mcompar_RGB_addra[16]_state[1]_AND_1_o_lutdi" (ROM) removed.
+      The signal "Mcompar_RGB_addra[16]_state[1]_AND_1_o_lutdi" is sourceless and has
+been removed.
+     Sourceless block "Maccum_RGB_addra_lut<1>_INV_0" (BUF) removed.
+      The signal "Maccum_RGB_addra_lut<1>" is sourceless and has been removed.
+       Sourceless block "Maccum_RGB_addra_cy<1>" (MUX) removed.
+        The signal "Maccum_RGB_addra_cy<1>" is sourceless and has been removed.
+       Sourceless block "Maccum_RGB_addra_xor<1>" (XOR) removed.
+        The signal "Result<1>" is sourceless and has been removed.
+   Sourceless block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/sel_pipe_0" (FF) removed.
+    The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/sel_pipe<0>" is sourceless and has been removed.
+     Sourceless block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_8" (ROM) removed.
+      The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_8" is sourceless and has been removed.
+       Sourceless block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_49" (ROM) removed.
+        The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_4" is sourceless and has been removed.
+         Sourceless block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_2_f7" (MUX) removed.
+          The signal "RGB_douta<10>" is sourceless and has been removed.
+     Sourceless block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_9" (ROM) removed.
+      The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_9" is sourceless and has been removed.
+     Sourceless block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_91" (ROM) removed.
+      The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_91" is sourceless and has been removed.
+     Sourceless block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_10" (ROM) removed.
+      The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_10" is sourceless and has been removed.
+     Sourceless block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_81" (ROM) removed.
+      The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_81" is sourceless and has been removed.
+       Sourceless block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_411" (ROM) removed.
+        The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_41" is sourceless and has been removed.
+         Sourceless block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_2_f7_0" (MUX) removed.
+          The signal "RGB_douta<11>" is sourceless and has been removed.
+     Sourceless block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_92" (ROM) removed.
+      The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_92" is sourceless and has been removed.
+     Sourceless block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_93" (ROM) removed.
+      The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_93" is sourceless and has been removed.
+     Sourceless block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_101" (ROM) removed.
+      The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_101" is sourceless and has been removed.
+     Sourceless block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_82" (ROM) removed.
+      The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_82" is sourceless and has been removed.
+       Sourceless block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_421" (ROM) removed.
+        The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_42" is sourceless and has been removed.
+         Sourceless block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_2_f7_1" (MUX) removed.
+          The signal "RGB_douta<12>" is sourceless and has been removed.
+     Sourceless block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_94" (ROM) removed.
+      The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_94" is sourceless and has been removed.
+     Sourceless block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_95" (ROM) removed.
+      The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_95" is sourceless and has been removed.
+     Sourceless block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_102" (ROM) removed.
+      The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_102" is sourceless and has been removed.
+     Sourceless block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_83" (ROM) removed.
+      The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_83" is sourceless and has been removed.
+       Sourceless block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_431" (ROM) removed.
+        The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_43" is sourceless and has been removed.
+         Sourceless block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_2_f7_2" (MUX) removed.
+          The signal "RGB_douta<13>" is sourceless and has been removed.
+     Sourceless block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_96" (ROM) removed.
+      The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_96" is sourceless and has been removed.
+     Sourceless block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_97" (ROM) removed.
+      The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_97" is sourceless and has been removed.
+     Sourceless block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_103" (ROM) removed.
+      The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_103" is sourceless and has been removed.
+     Sourceless block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_84" (ROM) removed.
+      The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_84" is sourceless and has been removed.
+       Sourceless block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_441" (ROM) removed.
+        The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_44" is sourceless and has been removed.
+         Sourceless block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_2_f7_3" (MUX) removed.
+          The signal "RGB_douta<14>" is sourceless and has been removed.
+     Sourceless block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_98" (ROM) removed.
+      The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_98" is sourceless and has been removed.
+     Sourceless block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_99" (ROM) removed.
+      The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_99" is sourceless and has been removed.
+     Sourceless block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_104" (ROM) removed.
+      The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_104" is sourceless and has been removed.
+     Sourceless block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_85" (ROM) removed.
+      The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_85" is sourceless and has been removed.
+       Sourceless block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_451" (ROM) removed.
+        The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_45" is sourceless and has been removed.
+         Sourceless block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_2_f7_4" (MUX) removed.
+          The signal "RGB_douta<15>" is sourceless and has been removed.
+     Sourceless block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_910" (ROM) removed.
+      The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_910" is sourceless and has been removed.
+     Sourceless block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_911" (ROM) removed.
+      The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_911" is sourceless and has been removed.
+     Sourceless block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_105" (ROM) removed.
+      The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_105" is sourceless and has been removed.
+     Sourceless block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_86" (ROM) removed.
+      The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_86" is sourceless and has been removed.
+       Sourceless block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_461" (ROM) removed.
+        The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_46" is sourceless and has been removed.
+         Sourceless block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_2_f7_5" (MUX) removed.
+          The signal "RGB_douta<7>" is sourceless and has been removed.
+     Sourceless block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_912" (ROM) removed.
+      The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_912" is sourceless and has been removed.
+     Sourceless block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_913" (ROM) removed.
+      The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_913" is sourceless and has been removed.
+     Sourceless block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_106" (ROM) removed.
+      The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_106" is sourceless and has been removed.
+     Sourceless block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_87" (ROM) removed.
+      The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_87" is sourceless and has been removed.
+       Sourceless block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_471" (ROM) removed.
+        The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_47" is sourceless and has been removed.
+         Sourceless block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_2_f7_6" (MUX) removed.
+          The signal "RGB_douta<8>" is sourceless and has been removed.
+     Sourceless block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_914" (ROM) removed.
+      The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_914" is sourceless and has been removed.
+     Sourceless block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_915" (ROM) removed.
+      The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_915" is sourceless and has been removed.
+     Sourceless block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_107" (ROM) removed.
+      The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_107" is sourceless and has been removed.
+     Sourceless block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_88" (ROM) removed.
+      The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_88" is sourceless and has been removed.
+       Sourceless block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_481" (ROM) removed.
+        The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_48" is sourceless and has been removed.
+         Sourceless block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_2_f7_7" (MUX) removed.
+          The signal "RGB_douta<9>" is sourceless and has been removed.
+     Sourceless block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_916" (ROM) removed.
+      The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_916" is sourceless and has been removed.
+     Sourceless block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_917" (ROM) removed.
+      The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_917" is sourceless and has been removed.
+     Sourceless block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_108" (ROM) removed.
+      The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_108" is sourceless and has been removed.
+     Sourceless block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/sel_pipe<1>81" (ROM) removed.
+      The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/sel_pipe<1>9" is sourceless and has been removed.
+       Sourceless block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_381" (ROM) removed.
+        The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_38" is sourceless and has been removed.
+     Sourceless block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/sel_pipe<1>71" (ROM) removed.
+      The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/sel_pipe<1>8" is sourceless and has been removed.
+       Sourceless block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_371" (ROM) removed.
+        The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_37" is sourceless and has been removed.
+     Sourceless block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/sel_pipe<1>61" (ROM) removed.
+      The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/sel_pipe<1>7" is sourceless and has been removed.
+       Sourceless block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_361" (ROM) removed.
+        The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_36" is sourceless and has been removed.
+     Sourceless block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/sel_pipe<1>51" (ROM) removed.
+      The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/sel_pipe<1>6" is sourceless and has been removed.
+       Sourceless block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_351" (ROM) removed.
+        The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_35" is sourceless and has been removed.
+     Sourceless block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/sel_pipe<1>41" (ROM) removed.
+      The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/sel_pipe<1>5" is sourceless and has been removed.
+       Sourceless block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_341" (ROM) removed.
+        The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_34" is sourceless and has been removed.
+     Sourceless block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/sel_pipe<1>31" (ROM) removed.
+      The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/sel_pipe<1>4" is sourceless and has been removed.
+       Sourceless block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_331" (ROM) removed.
+        The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_33" is sourceless and has been removed.
+     Sourceless block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/sel_pipe<1>21" (ROM) removed.
+      The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/sel_pipe<1>3" is sourceless and has been removed.
+       Sourceless block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_321" (ROM) removed.
+        The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_32" is sourceless and has been removed.
+     Sourceless block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/sel_pipe<1>11" (ROM) removed.
+      The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/sel_pipe<1>2" is sourceless and has been removed.
+       Sourceless block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_311" (ROM) removed.
+        The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_31" is sourceless and has been removed.
+     Sourceless block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/sel_pipe<1>1" (ROM) removed.
+      The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/sel_pipe<1>1" is sourceless and has been removed.
+       Sourceless block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_39" (ROM) removed.
+        The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux_3" is sourceless and has been removed.
+   Sourceless block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/sel_pipe_1" (FF) removed.
+    The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/sel_pipe<1>" is sourceless and has been removed.
+   Sourceless block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/sel_pipe_2" (FF) removed.
+    The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/sel_pipe<2>" is sourceless and has been removed.
+     Sourceless block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux11" (ROM) removed.
+      The signal "RGB_douta<0>" is sourceless and has been removed.
+     Sourceless block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux21" (ROM) removed.
+      The signal "RGB_douta<1>" is sourceless and has been removed.
+     Sourceless block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux31" (ROM) removed.
+      The signal "RGB_douta<2>" is sourceless and has been removed.
+     Sourceless block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux41" (ROM) removed.
+      The signal "RGB_douta<3>" is sourceless and has been removed.
+     Sourceless block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux51" (ROM) removed.
+      The signal "RGB_douta<4>" is sourceless and has been removed.
+     Sourceless block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux61" (ROM) removed.
+      The signal "RGB_douta<5>" is sourceless and has been removed.
+     Sourceless block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/Mmux_dout_mux71" (ROM) removed.
+      The signal "RGB_douta<6>" is sourceless and has been removed.
+   Sourceless block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/sel_pipe_3" (FF) removed.
+    The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/sel_pipe<3>" is sourceless and has been removed.
+   Sourceless block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/sel_pipe_4" (FF) removed.
+    The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/has_mux_a.A/sel_pipe<4>" is sourceless and has been removed.
+The signal "your_instance_name/N0" is sourceless and has been removed.
+The signal "your_instance_name/N1" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[12].ram.ram_douta<3>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[14].ram.ram_douta<3>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[13].ram.ram_douta<3>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[11].ram.ram_douta<3>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[16].ram.ram_douta<3>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[18].ram.ram_douta<3>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[17].ram.ram_douta<3>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[15].ram.ram_douta<3>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[20].ram.ram_douta<3>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[22].ram.ram_douta<3>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[21].ram.ram_douta<3>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[19].ram.ram_douta<3>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[24].ram.ram_douta<3>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[26].ram.ram_douta<3>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[25].ram.ram_douta<3>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[23].ram.ram_douta<3>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[12].ram.ram_douta<4>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[14].ram.ram_douta<4>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[13].ram.ram_douta<4>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[11].ram.ram_douta<4>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[16].ram.ram_douta<4>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[18].ram.ram_douta<4>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[17].ram.ram_douta<4>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[15].ram.ram_douta<4>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[20].ram.ram_douta<4>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[22].ram.ram_douta<4>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[21].ram.ram_douta<4>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[19].ram.ram_douta<4>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[24].ram.ram_douta<4>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[26].ram.ram_douta<4>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[25].ram.ram_douta<4>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[23].ram.ram_douta<4>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[12].ram.ram_douta<5>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[14].ram.ram_douta<5>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[13].ram.ram_douta<5>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[11].ram.ram_douta<5>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[16].ram.ram_douta<5>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[18].ram.ram_douta<5>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[17].ram.ram_douta<5>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[15].ram.ram_douta<5>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[20].ram.ram_douta<5>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[22].ram.ram_douta<5>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[21].ram.ram_douta<5>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[19].ram.ram_douta<5>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[24].ram.ram_douta<5>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[26].ram.ram_douta<5>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[25].ram.ram_douta<5>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[23].ram.ram_douta<5>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[12].ram.ram_douta<6>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[14].ram.ram_douta<6>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[13].ram.ram_douta<6>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[11].ram.ram_douta<6>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[16].ram.ram_douta<6>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[18].ram.ram_douta<6>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[17].ram.ram_douta<6>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[15].ram.ram_douta<6>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[20].ram.ram_douta<6>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[22].ram.ram_douta<6>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[21].ram.ram_douta<6>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[19].ram.ram_douta<6>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[24].ram.ram_douta<6>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[26].ram.ram_douta<6>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[25].ram.ram_douta<6>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[23].ram.ram_douta<6>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[12].ram.ram_douta<7>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[14].ram.ram_douta<7>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[13].ram.ram_douta<7>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[11].ram.ram_douta<7>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[16].ram.ram_douta<7>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[18].ram.ram_douta<7>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[17].ram.ram_douta<7>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[15].ram.ram_douta<7>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[20].ram.ram_douta<7>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[22].ram.ram_douta<7>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[21].ram.ram_douta<7>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[19].ram.ram_douta<7>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[24].ram.ram_douta<7>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[26].ram.ram_douta<7>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[25].ram.ram_douta<7>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[23].ram.ram_douta<7>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[12].ram.ram_douta<8>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[14].ram.ram_douta<8>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[13].ram.ram_douta<8>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[11].ram.ram_douta<8>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[16].ram.ram_douta<8>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[18].ram.ram_douta<8>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[17].ram.ram_douta<8>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[15].ram.ram_douta<8>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[20].ram.ram_douta<8>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[22].ram.ram_douta<8>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[21].ram.ram_douta<8>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[19].ram.ram_douta<8>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[24].ram.ram_douta<8>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[26].ram.ram_douta<8>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[25].ram.ram_douta<8>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[23].ram.ram_douta<8>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[12].ram.ram_douta<0>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[14].ram.ram_douta<0>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[13].ram.ram_douta<0>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[11].ram.ram_douta<0>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[16].ram.ram_douta<0>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[18].ram.ram_douta<0>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[17].ram.ram_douta<0>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[15].ram.ram_douta<0>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[20].ram.ram_douta<0>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[22].ram.ram_douta<0>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[21].ram.ram_douta<0>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[19].ram.ram_douta<0>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[24].ram.ram_douta<0>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[26].ram.ram_douta<0>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[25].ram.ram_douta<0>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[23].ram.ram_douta<0>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[12].ram.ram_douta<1>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[14].ram.ram_douta<1>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[13].ram.ram_douta<1>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[11].ram.ram_douta<1>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[16].ram.ram_douta<1>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[18].ram.ram_douta<1>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[17].ram.ram_douta<1>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[15].ram.ram_douta<1>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[20].ram.ram_douta<1>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[22].ram.ram_douta<1>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[21].ram.ram_douta<1>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[19].ram.ram_douta<1>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[24].ram.ram_douta<1>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[26].ram.ram_douta<1>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[25].ram.ram_douta<1>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[23].ram.ram_douta<1>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[12].ram.ram_douta<2>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[14].ram.ram_douta<2>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[13].ram.ram_douta<2>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[11].ram.ram_douta<2>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[16].ram.ram_douta<2>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[18].ram.ram_douta<2>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[17].ram.ram_douta<2>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[15].ram.ram_douta<2>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[20].ram.ram_douta<2>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[22].ram.ram_douta<2>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[21].ram.ram_douta<2>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[19].ram.ram_douta<2>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[24].ram.ram_douta<2>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[26].ram.ram_douta<2>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[25].ram.ram_douta<2>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[23].ram.ram_douta<2>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[0].ram.ram_douta" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[1].ram.ram_douta" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[2].ram.ram_douta" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[3].ram.ram_douta<0>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[4].ram.ram_douta" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[3].ram.ram_douta<1>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[5].ram.ram_douta" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[6].ram.ram_douta<0>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[7].ram.ram_douta" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[6].ram.ram_douta<1>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[8].ram.ram_douta" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[9].ram.ram_douta<0>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[10].ram.ram_douta" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[9].ram.ram_douta<1>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ena_array<8>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ena_array<12>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ena_array<4>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ena_array<0>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ena_array<11>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ena_array<15>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ena_array<7>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ena_array<3>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ena_array<10>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ena_array<14>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ena_array<6>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ena_array<2>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ena_array<9>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ena_array<13>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ena_array<5>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ena_array<1>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[28].ram.ram_douta<2>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[30].ram.ram_douta<2>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[29].ram.ram_douta<2>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[27].ram.ram_douta<2>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[28].ram.ram_douta<1>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[30].ram.ram_douta<1>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[29].ram.ram_douta<1>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[27].ram.ram_douta<1>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[28].ram.ram_douta<0>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[30].ram.ram_douta<0>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[29].ram.ram_douta<0>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[27].ram.ram_douta<0>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[28].ram.ram_douta<8>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[30].ram.ram_douta<8>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[29].ram.ram_douta<8>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[27].ram.ram_douta<8>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[28].ram.ram_douta<7>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[30].ram.ram_douta<7>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[29].ram.ram_douta<7>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[27].ram.ram_douta<7>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[28].ram.ram_douta<6>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[30].ram.ram_douta<6>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[29].ram.ram_douta<6>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[27].ram.ram_douta<6>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[28].ram.ram_douta<5>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[30].ram.ram_douta<5>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[29].ram.ram_douta<5>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[27].ram.ram_douta<5>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[28].ram.ram_douta<4>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[30].ram.ram_douta<4>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[29].ram.ram_douta<4>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[27].ram.ram_douta<4>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[28].ram.ram_douta<3>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[30].ram.ram_douta<3>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[29].ram.ram_douta<3>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[27].ram.ram_douta<3>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/bindec_a.bindec_inst_a/ADDR[4]_PWR_16_o_equal_17_o<4>1" is sourceless and
+has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ena_array<16>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ena_array<17>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ena_array<18>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ena_array<19>" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[0].ram.r/v6_init.ram/cascadelata_tmp" is sourceless and has been
+removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[0].ram.r/v6_init.ram/cascadelatb_tmp" is sourceless and has been
+removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[0].ram.ram_ena" is sourceless and has been removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[2].ram.r/v6_init.ram/cascadelata_tmp" is sourceless and has been
+removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[2].ram.r/v6_init.ram/cascadelatb_tmp" is sourceless and has been
+removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[4].ram.r/v6_init.ram/cascadelata_tmp" is sourceless and has been
+removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[4].ram.r/v6_init.ram/cascadelatb_tmp" is sourceless and has been
+removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[5].ram.r/v6_init.ram/cascadelata_tmp" is sourceless and has been
+removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[5].ram.r/v6_init.ram/cascadelatb_tmp" is sourceless and has been
+removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[7].ram.r/v6_init.ram/cascadelata_tmp" is sourceless and has been
+removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[7].ram.r/v6_init.ram/cascadelatb_tmp" is sourceless and has been
+removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[8].ram.r/v6_init.ram/cascadelata_tmp" is sourceless and has been
+removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[8].ram.r/v6_init.ram/cascadelatb_tmp" is sourceless and has been
+removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[10].ram.r/v6_init.ram/cascadelata_tmp" is sourceless and has been
+removed.
+The signal
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[10].ram.r/v6_init.ram/cascadelatb_tmp" is sourceless and has been
+removed.
+The signal "cntrd_instant/douta<15>" is sourceless and has been removed.
+The signal "cntrd_instant/douta<14>" is sourceless and has been removed.
+The signal "cntrd_instant/douta<13>" is sourceless and has been removed.
+The signal "cntrd_instant/douta<12>" is sourceless and has been removed.
+The signal "cntrd_instant/douta<11>" is sourceless and has been removed.
+The signal "cntrd_instant/douta<10>" is sourceless and has been removed.
+The signal "cntrd_instant/douta<9>" is sourceless and has been removed.
+The signal "cntrd_instant/douta<8>" is sourceless and has been removed.
+The signal "cntrd_instant/douta<7>" is sourceless and has been removed.
+The signal "cntrd_instant/douta<6>" is sourceless and has been removed.
+The signal "cntrd_instant/douta<5>" is sourceless and has been removed.
+The signal "cntrd_instant/douta<4>" is sourceless and has been removed.
+The signal "cntrd_instant/douta<3>" is sourceless and has been removed.
+The signal "cntrd_instant/douta<2>" is sourceless and has been removed.
+The signal "cntrd_instant/douta<1>" is sourceless and has been removed.
+The signal "cntrd_instant/douta<0>" is sourceless and has been removed.
+The signal "cntrd_instant/N0" is sourceless and has been removed.
+The signal "cntrd_instant/N1" is sourceless and has been removed.
+
+The trimmed logic reported below is either:
+   1. part of a cycle
+   2. part of disabled logic
+   3. a side-effect of other trimmed logic
+
+The signal "k_3_IBUF" is unused and has been removed.
+ Unused block "k_3_IBUF" (BUF) removed.
+  The signal "k<3>" is unused and has been removed.
+   Unused block "k<3>" (PAD) removed.
+The signal "k_2_IBUF" is unused and has been removed.
+ Unused block "k_2_IBUF" (BUF) removed.
+  The signal "k<2>" is unused and has been removed.
+   Unused block "k<2>" (PAD) removed.
+The signal "k_1_IBUF" is unused and has been removed.
+ Unused block "k_1_IBUF" (BUF) removed.
+  The signal "k<1>" is unused and has been removed.
+   Unused block "k<1>" (PAD) removed.
+The signal "clr_IBUF" is unused and has been removed.
+ Unused block "clr_IBUF" (BUF) removed.
+  The signal "clr" is unused and has been removed.
+   Unused block "clr" (PAD) removed.
+The signal "do_IBUF" is unused and has been removed.
+ Unused block "do_IBUF" (BUF) removed.
+  The signal "do" is unused and has been removed.
+   Unused block "do" (PAD) removed.
+The signal "GND_5_o_GND_5_o_sub_9_OUT<3>" is unused and has been removed.
+ Unused block "GND_5_o_GND_5_o_sub_9_OUT<3>1" (ROM) removed.
+  The signal "Msub_GND_5_o_GND_5_o_sub_9_OUT<3:0>_cy<0>" is unused and has been
+removed.
+   Unused block "k_0_IBUF" (BUF) removed.
+    The signal "k<0>" is unused and has been removed.
+     Unused block "k<0>" (PAD) removed.
+The signal "GND_5_o_GND_5_o_sub_9_OUT<2>" is unused and has been removed.
+ Unused block "GND_5_o_GND_5_o_sub_9_OUT<2>1" (ROM) removed.
+The signal "GND_5_o_GND_5_o_sub_9_OUT<1>" is unused and has been removed.
+ Unused block "Msub_GND_5_o_GND_5_o_sub_9_OUT<3:0>_xor<1>11" (ROM) removed.
+The signal "GND_5_o_GND_5_o_sub_9_OUT<0>" is unused and has been removed.
+ Unused block "Msub_GND_5_o_GND_5_o_sub_9_OUT<3:0>_xor<0>11_INV_0" (BUF) removed.
+The signal "Mcompar_RGB_addra[16]_state[1]_AND_1_o_lut<2>" is unused and has
+been removed.
+ Unused block "XST_VCC" (ONE) removed.
+The signal "clk" is unused and has been removed.
+ Unused block "clk" (PAD) removed.
+Unused block "clk_BUFGP/IBUFG" (CKBUF) removed.
+Unused block
+"cntrd_instant/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr
+/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram" (RAMB36E1)
+removed.
+Unused block "cntrd_instant/XST_GND" (ZERO) removed.
+Unused block "cntrd_instant/XST_VCC" (ONE) removed.
+Unused block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/bindec_a.bindec_inst_a/ADDR[4]_GND_16_o_equal_10_o<4>1" (ROM) removed.
+Unused block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/bindec_a.bindec_inst_a/ADDR[4]_GND_16_o_equal_11_o<4>1" (ROM) removed.
+Unused block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/bindec_a.bindec_inst_a/ADDR[4]_GND_16_o_equal_12_o<4>1" (ROM) removed.
+Unused block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/bindec_a.bindec_inst_a/ADDR[4]_GND_16_o_equal_13_o<4>1" (ROM) removed.
+Unused block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/bindec_a.bindec_inst_a/ADDR[4]_GND_16_o_equal_14_o<4>1" (ROM) removed.
+Unused block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/bindec_a.bindec_inst_a/ADDR[4]_GND_16_o_equal_15_o<4>1" (ROM) removed.
+Unused block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/bindec_a.bindec_inst_a/ADDR[4]_GND_16_o_equal_16_o<4>1" (ROM) removed.
+Unused block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/bindec_a.bindec_inst_a/ADDR[4]_GND_16_o_equal_1_o<4>1" (ROM) removed.
+Unused block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/bindec_a.bindec_inst_a/ADDR[4]_GND_16_o_equal_2_o<4>1" (ROM) removed.
+Unused block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/bindec_a.bindec_inst_a/ADDR[4]_GND_16_o_equal_3_o<4>1" (ROM) removed.
+Unused block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/bindec_a.bindec_inst_a/ADDR[4]_GND_16_o_equal_4_o<4>1" (ROM) removed.
+Unused block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/bindec_a.bindec_inst_a/ADDR[4]_GND_16_o_equal_5_o<4>1" (ROM) removed.
+Unused block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/bindec_a.bindec_inst_a/ADDR[4]_GND_16_o_equal_6_o<4>1" (ROM) removed.
+Unused block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/bindec_a.bindec_inst_a/ADDR[4]_GND_16_o_equal_7_o<4>1" (ROM) removed.
+Unused block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/bindec_a.bindec_inst_a/ADDR[4]_GND_16_o_equal_8_o<4>1" (ROM) removed.
+Unused block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/bindec_a.bindec_inst_a/ADDR[4]_GND_16_o_equal_9_o<4>1" (ROM) removed.
+Unused block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/bindec_a.bindec_inst_a/ADDR[4]_PWR_16_o_equal_17_o<4>11" (ROM) removed.
+Unused block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/bindec_a.bindec_inst_a/ADDR[4]_PWR_16_o_equal_17_o<4>2" (ROM) removed.
+Unused block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/bindec_a.bindec_inst_a/ADDR[4]_PWR_16_o_equal_18_o<4>1" (ROM) removed.
+Unused block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/bindec_a.bindec_inst_a/ADDR[4]_PWR_16_o_equal_19_o<4>1" (ROM) removed.
+Unused block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/bindec_a.bindec_inst_a/ADDR[4]_PWR_16_o_equal_20_o<4>1" (ROM) removed.
+Unused block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/out21_INV_0" (BUF) removed.
+Unused block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B"
+(RAMB36E1) removed.
+Unused block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T"
+(RAMB36E1) removed.
+Unused block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[10].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B"
+(RAMB36E1) removed.
+Unused block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[10].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T"
+(RAMB36E1) removed.
+Unused block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[11].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram" (RAMB36E1)
+removed.
+Unused block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[12].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram" (RAMB36E1)
+removed.
+Unused block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[13].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram" (RAMB36E1)
+removed.
+Unused block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[14].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram" (RAMB36E1)
+removed.
+Unused block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[15].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram" (RAMB36E1)
+removed.
+Unused block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[16].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram" (RAMB36E1)
+removed.
+Unused block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[17].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram" (RAMB36E1)
+removed.
+Unused block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[18].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram" (RAMB36E1)
+removed.
+Unused block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[19].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram" (RAMB36E1)
+removed.
+Unused block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[1].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM18.ram" (RAMB18E1)
+removed.
+Unused block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[20].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram" (RAMB36E1)
+removed.
+Unused block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[21].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram" (RAMB36E1)
+removed.
+Unused block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[22].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram" (RAMB36E1)
+removed.
+Unused block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[23].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram" (RAMB36E1)
+removed.
+Unused block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[24].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram" (RAMB36E1)
+removed.
+Unused block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[25].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram" (RAMB36E1)
+removed.
+Unused block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[26].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram" (RAMB36E1)
+removed.
+Unused block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[27].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram" (RAMB36E1)
+removed.
+Unused block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[28].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram" (RAMB36E1)
+removed.
+Unused block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[29].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram" (RAMB36E1)
+removed.
+Unused block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[2].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B"
+(RAMB36E1) removed.
+Unused block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[2].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T"
+(RAMB36E1) removed.
+Unused block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[30].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram" (RAMB36E1)
+removed.
+Unused block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[3].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram" (RAMB36E1)
+removed.
+Unused block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[4].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B"
+(RAMB36E1) removed.
+Unused block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[4].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T"
+(RAMB36E1) removed.
+Unused block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[5].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B"
+(RAMB36E1) removed.
+Unused block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[5].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T"
+(RAMB36E1) removed.
+Unused block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[6].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram" (RAMB36E1)
+removed.
+Unused block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[7].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B"
+(RAMB36E1) removed.
+Unused block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[7].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T"
+(RAMB36E1) removed.
+Unused block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[8].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B"
+(RAMB36E1) removed.
+Unused block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[8].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T"
+(RAMB36E1) removed.
+Unused block
+"your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid
+.cstr/ramloop[9].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram" (RAMB36E1)
+removed.
+Unused block "your_instance_name/XST_GND" (ZERO) removed.
+Unused block "your_instance_name/XST_VCC" (ONE) removed.
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		XST_GND
+
+Section 6 - IOB Properties
+--------------------------
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
+|                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| grp_out<0>                         | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| grp_out<1>                         | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| grp_out<2>                         | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| grp_out<3>                         | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| grp_out<4>                         | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| grp_out<5>                         | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| grp_out<6>                         | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| grp_out<7>                         | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| grp_out<8>                         | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| grp_out<9>                         | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| grp_out<10>                        | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| grp_out<11>                        | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| grp_out<12>                        | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| grp_out<13>                        | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| grp_out<14>                        | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| grp_out<15>                        | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Timing Report
+--------------------------
+A logic-level (pre-route) timing report can be generated by using Xilinx static
+timing analysis tools, Timing Analyzer (GUI) or TRCE (command line), with the
+mapped NCD and PCF files. Please note that this timing report will be generated
+using estimated delay information. For accurate numbers, please generate a
+timing report with the post Place and Route NCD file.
+
+For more information about the Timing Analyzer, consult the Xilinx Timing
+Analyzer Reference Manual; for more information about TRCE, consult the Xilinx
+Command Line Tools User Guide "TRACE" chapter.
+
+Section 11 - Configuration String Details
+-----------------------------------------
+Use the "-detail" map option to print out Configuration Strings
+
+Section 12 - Control Set Information
+------------------------------------
+Use the "-detail" map option to print out Control Set Information.
+
+Section 13 - Utilization by Hierarchy
+-------------------------------------
+Use the "-detail" map option to print out the Utilization by Hierarchy section.
