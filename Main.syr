@@ -1,0 +1,740 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> Reading design: Main.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Main.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Main"
+Output Format                      : NGC
+Target Device                      : xc7a100t-1-csg324
+
+---- Source Options
+Top Module Name                    : Main
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:\Users\husamhaj\Desktop\Personal Projects\KMeans_img\ipcore_dir\RGB_Ram.vhd" into library work
+Parsing entity <RGB_Ram>.
+Parsing architecture <RGB_Ram_a> of entity <rgb_ram>.
+Parsing VHDL file "C:\Users\husamhaj\Desktop\Personal Projects\KMeans_img\ipcore_dir\cntrd_ram.vhd" into library work
+Parsing entity <cntrd_ram>.
+Parsing architecture <cntrd_ram_a> of entity <cntrd_ram>.
+Parsing VHDL file "C:\Users\husamhaj\Desktop\Personal Projects\KMeans_img\ipcore_dir\sqrt.vhd" into library work
+Parsing entity <sqrt>.
+Parsing architecture <sqrt_a> of entity <sqrt>.
+Parsing VHDL file "C:\Users\husamhaj\Desktop\Personal Projects\KMeans_img\euclid.vhd" into library work
+Parsing entity <euclid>.
+Parsing architecture <Behavioral> of entity <euclid>.
+Parsing VHDL file "C:\Users\husamhaj\Desktop\Personal Projects\KMeans_img\Main.vhd" into library work
+Parsing entity <Main>.
+Parsing architecture <Behavioral> of entity <main>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <Main> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:871 - "C:\Users\husamhaj\Desktop\Personal Projects\KMeans_img\Main.vhd" Line 81: Using initial value "00000000000000000000000000000000" for rgb_dina since it is never assigned
+
+Elaborating entity <RGB_Ram> (architecture <RGB_Ram_a>) from library <work>.
+
+Elaborating entity <cntrd_ram> (architecture <cntrd_ram_a>) from library <work>.
+
+Elaborating entity <euclid> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <sqrt> (architecture <sqrt_a>) from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <Main>.
+    Related source file is "C:\Users\husamhaj\Desktop\Personal Projects\KMeans_img\Main.vhd".
+INFO:Xst:3210 - "C:\Users\husamhaj\Desktop\Personal Projects\KMeans_img\Main.vhd" line 206: Output port <dist> of the instance <Inst_euclid> is unconnected or connected to loadless signal.
+    Found 3-bit register for signal <state>.
+    Found 32-bit register for signal <i_cnt>.
+    Found 32-bit register for signal <K_cnt>.
+    Found 32-bit register for signal <n_cnt>.
+    Found 4-bit register for signal <c_wea>.
+    Found 4-bit register for signal <RGB_wea>.
+    Found 32-bit register for signal <c_addra>.
+    Found 32-bit register for signal <RGB_addra>.
+    Found 32-bit register for signal <c_dina>.
+    Found 32-bit register for signal <euc_cntrd>.
+    Found 32-bit register for signal <euc_din>.
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 6                                              |
+    | Transitions        | 9                                              |
+    | Inputs             | 3                                              |
+    | Outputs            | 10                                             |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | clr (positive)                                 |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | st_idle                                        |
+    | Power Up State     | st_idle                                        |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 32-bit adder for signal <i_cnt[31]_GND_6_o_add_10_OUT> created at line 137.
+    Found 32-bit adder for signal <K_cnt[31]_GND_6_o_add_16_OUT> created at line 149.
+    Found 32-bit adder for signal <n_cnt[31]_GND_6_o_add_17_OUT> created at line 152.
+    Found 32-bit comparator greater for signal <i_cnt[31]_GND_6_o_LessThan_9_o> created at line 136
+    Found 32-bit comparator greater for signal <K_cnt[31]_GND_6_o_LessThan_15_o> created at line 148
+    Found 32-bit comparator equal for signal <n_cnt[31]_n[31]_equal_19_o> created at line 153
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred 264 D-type flip-flop(s).
+	inferred   3 Comparator(s).
+	inferred   4 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <Main> synthesized.
+
+Synthesizing Unit <euclid>.
+    Related source file is "C:\Users\husamhaj\Desktop\Personal Projects\KMeans_img\euclid.vhd".
+WARNING:Xst:647 - Input <cntrd<31:12>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <din<31:12>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit register for signal <s_valid_in>.
+    Found 2-bit register for signal <state>.
+    Found finite state machine <FSM_1> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 5                                              |
+    | Inputs             | 2                                              |
+    | Outputs            | 2                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | clr_rdy_in_OR_37_o (positive)                  |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | standby                                        |
+    | Power Up State     | standby                                        |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 16-bit adder for signal <n0062> created at line 74.
+    Found 16-bit adder for signal <s_din> created at line 74.
+    Found 4-bit subtractor for signal <R[3]_R1[3]_sub_8_OUT<3:0>> created at line 74.
+    Found 4-bit subtractor for signal <G[3]_G1[3]_sub_11_OUT<3:0>> created at line 74.
+    Found 4-bit subtractor for signal <B[3]_B1[3]_sub_15_OUT<3:0>> created at line 74.
+    Found 4x4-bit multiplier for signal <R[3]_R[3]_MuLt_9_OUT> created at line 74.
+    Found 4x4-bit multiplier for signal <G[3]_G[3]_MuLt_12_OUT> created at line 74.
+    Found 4x4-bit multiplier for signal <B[3]_B[3]_MuLt_16_OUT> created at line 74.
+    Summary:
+	inferred   3 Multiplier(s).
+	inferred   5 Adder/Subtractor(s).
+	inferred   1 D-type flip-flop(s).
+	inferred   1 Finite State Machine(s).
+Unit <euclid> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 3
+ 4x4-bit multiplier                                    : 3
+# Adders/Subtractors                                   : 8
+ 16-bit adder                                          : 2
+ 32-bit adder                                          : 3
+ 4-bit subtractor                                      : 3
+# Registers                                            : 11
+ 1-bit register                                        : 1
+ 32-bit register                                       : 8
+ 4-bit register                                        : 2
+# Comparators                                          : 3
+ 32-bit comparator equal                               : 1
+ 32-bit comparator greater                             : 2
+# Multiplexers                                         : 4
+ 32-bit 2-to-1 multiplexer                             : 4
+# FSMs                                                 : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/RGB_Ram.ngc>.
+Reading core <ipcore_dir/cntrd_ram.ngc>.
+Reading core <ipcore_dir/sqrt.ngc>.
+Reading Secure Unit <blk00000001>.
+Loading core <RGB_Ram> for timing and area information for instance <your_instance_name>.
+Loading core <cntrd_ram> for timing and area information for instance <cntrd_instant>.
+Loading core <sqrt> for timing and area information for instance <your_instance_name>.
+WARNING:Xst:1293 - FF/Latch <RGB_wea_0> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <RGB_wea_1> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <RGB_wea_2> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <RGB_wea_3> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <euc_cntrd_12> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <euc_cntrd_13> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <euc_cntrd_14> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <euc_cntrd_15> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <euc_cntrd_16> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <euc_cntrd_17> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <euc_cntrd_18> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <euc_cntrd_19> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <euc_cntrd_20> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <euc_cntrd_21> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <euc_cntrd_22> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <euc_cntrd_23> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <euc_cntrd_24> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <euc_cntrd_25> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <euc_cntrd_26> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <euc_cntrd_27> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <euc_cntrd_28> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <euc_cntrd_29> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <euc_cntrd_30> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <euc_cntrd_31> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <euc_din_12> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <euc_din_13> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <euc_din_14> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <euc_din_15> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <euc_din_16> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <euc_din_17> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <euc_din_18> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <euc_din_19> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <euc_din_20> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <euc_din_21> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <euc_din_22> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <euc_din_23> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <euc_din_24> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <euc_din_25> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <euc_din_26> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <euc_din_27> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <euc_din_28> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <euc_din_29> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <euc_din_30> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <euc_din_31> of sequential type is unconnected in block <Main>.
+
+Synthesizing (advanced) Unit <Main>.
+The following registers are absorbed into accumulator <i_cnt>: 1 register on signal <i_cnt>.
+Unit <Main> synthesized (advanced).
+
+Synthesizing (advanced) Unit <euclid>.
+	Multiplier <Mmult_B[3]_B[3]_MuLt_16_OUT> in block <euclid> and adder/subtractor <Madd_s_din> in block <euclid> are combined into a MAC<Maddsub_B[3]_B[3]_MuLt_16_OUT>.
+	Multiplier <Mmult_G[3]_G[3]_MuLt_12_OUT> in block <euclid> and adder/subtractor <Madd_n0062> in block <euclid> are combined into a MAC<Maddsub_G[3]_G[3]_MuLt_12_OUT>.
+Unit <euclid> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# MACs                                                 : 2
+ 4x4-to-16-bit MAC                                     : 2
+# Multipliers                                          : 1
+ 4x4-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 5
+ 32-bit adder                                          : 2
+ 4-bit subtractor                                      : 3
+# Accumulators                                         : 1
+ 32-bit up accumulator                                 : 1
+# Registers                                            : 233
+ Flip-Flops                                            : 233
+# Comparators                                          : 3
+ 32-bit comparator equal                               : 1
+ 32-bit comparator greater                             : 2
+# Multiplexers                                         : 4
+ 32-bit 2-to-1 multiplexer                             : 4
+# FSMs                                                 : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1293 - FF/Latch <RGB_wea_0> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <RGB_wea_1> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <RGB_wea_2> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <RGB_wea_3> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_0> on signal <state[1:3]> with user encoding.
+------------------------
+ State      | Encoding
+------------------------
+ st_idle    | 000
+ init_cntrd | 001
+ nxt_cntrd  | 010
+ rd_mem     | 011
+ st_load    | 100
+ st_cmpr    | 101
+------------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <Inst_euclid/FSM_1> on signal <state[1:2]> with user encoding.
+---------------------
+ State   | Encoding
+---------------------
+ standby | 00
+ rd_data | 01
+ st_send | 10
+---------------------
+WARNING:Xst:1293 - FF/Latch <K_cnt_0> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <K_cnt_1> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <n_cnt_0> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <n_cnt_1> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <c_addra_0> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <c_addra_1> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <RGB_addra_0> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <RGB_addra_1> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_cnt_0> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_cnt_1> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <c_wea_0> in Unit <Main> is equivalent to the following 3 FFs/Latches, which will be removed : <c_wea_1> <c_wea_2> <c_wea_3> 
+
+Optimizing unit <Main> ...
+
+Optimizing unit <euclid> ...
+WARNING:Xst:2677 - Node <euc_din_12> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <euc_din_13> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <euc_din_14> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <euc_din_15> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <euc_din_16> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <euc_din_17> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <euc_din_18> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <euc_din_19> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <euc_din_20> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <euc_din_21> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <euc_din_22> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <euc_din_23> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <euc_din_24> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <euc_din_25> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <euc_din_26> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <euc_din_27> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <euc_din_28> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <euc_din_29> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <euc_din_30> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <euc_din_31> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <euc_cntrd_12> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <euc_cntrd_13> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <euc_cntrd_14> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <euc_cntrd_15> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <euc_cntrd_16> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <euc_cntrd_17> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <euc_cntrd_18> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <euc_cntrd_19> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <euc_cntrd_20> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <euc_cntrd_21> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <euc_cntrd_22> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <euc_cntrd_23> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <euc_cntrd_24> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <euc_cntrd_25> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <euc_cntrd_26> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <euc_cntrd_27> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <euc_cntrd_28> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <euc_cntrd_29> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <euc_cntrd_30> of sequential type is unconnected in block <Main>.
+WARNING:Xst:2677 - Node <euc_cntrd_31> of sequential type is unconnected in block <Main>.
+WARNING:Xst:1293 - FF/Latch <i_cnt_12> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_cnt_11> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_cnt_10> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_cnt_9> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <c_addra_31> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <c_addra_30> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <c_addra_29> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <c_addra_28> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <c_addra_27> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <c_addra_26> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <c_addra_25> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <c_addra_24> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <c_addra_23> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <c_addra_22> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <c_addra_21> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <c_addra_20> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <c_addra_19> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <c_addra_18> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_cnt_31> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_cnt_30> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_cnt_29> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_cnt_28> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_cnt_27> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_cnt_26> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_cnt_25> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_cnt_24> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_cnt_23> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_cnt_22> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_cnt_21> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_cnt_20> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_cnt_19> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_cnt_18> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_cnt_17> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_cnt_16> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_cnt_15> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_cnt_14> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <i_cnt_13> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <K_cnt_21> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <K_cnt_20> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <K_cnt_19> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <K_cnt_18> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <K_cnt_17> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <K_cnt_16> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <K_cnt_15> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <K_cnt_14> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <K_cnt_13> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <K_cnt_12> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <K_cnt_11> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <K_cnt_10> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <K_cnt_9> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <K_cnt_8> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <K_cnt_7> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <K_cnt_6> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <K_cnt_5> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <K_cnt_4> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <K_cnt_3> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <c_addra_17> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <c_addra_16> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <c_addra_15> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <c_addra_14> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <c_addra_13> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <c_addra_12> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <c_addra_11> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <c_addra_10> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <c_addra_9> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <K_cnt_31> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <K_cnt_30> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <K_cnt_29> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <K_cnt_28> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <K_cnt_27> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <K_cnt_26> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <K_cnt_25> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <K_cnt_24> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <K_cnt_23> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <K_cnt_22> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Main, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 138
+ Flip-Flops                                            : 138
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : Main.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 958
+#      GND                         : 13
+#      INV                         : 35
+#      LUT1                        : 36
+#      LUT2                        : 96
+#      LUT3                        : 76
+#      LUT4                        : 79
+#      LUT5                        : 53
+#      LUT6                        : 240
+#      MUXCY                       : 153
+#      MUXF7                       : 32
+#      VCC                         : 12
+#      XORCY                       : 133
+# FlipFlops/Latches                : 147
+#      FDC                         : 39
+#      FDCE                        : 4
+#      FDE                         : 103
+#      FDR                         : 1
+# RAMS                             : 82
+#      RAMB18E1                    : 3
+#      RAMB36E1                    : 79
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 58
+#      IBUF                        : 42
+#      OBUF                        : 16
+# DSPs                             : 2
+#      DSP48E1                     : 2
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a100tcsg324-1 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             147  out of  126800     0%  
+ Number of Slice LUTs:                  615  out of  63400     0%  
+    Number used as Logic:               615  out of  63400     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    667
+   Number with an unused Flip Flop:     520  out of    667    77%  
+   Number with an unused LUT:            52  out of    667     7%  
+   Number of fully used LUT-FF pairs:    95  out of    667    14%  
+   Number of unique control sets:        10
+
+IO Utilization: 
+ Number of IOs:                          59
+ Number of bonded IOBs:                  59  out of    210    28%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:               81  out of    135    60%  
+    Number using Block RAM only:         81
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+ Number of DSP48E1s:                      2  out of    240     0%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 229   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+Control Signal                                                                                                                                                     | Buffer(FF name)                                                                                                                                                             | Load  |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+your_instance_name/U0/xst_blk_mem_generator/gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/has_mux_a.A/Mmux_dout_mux_12102(your_instance_name/XST_GND:G)| NONE(your_instance_name/U0/xst_blk_mem_generator/gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[71].ram.r/v6_init.ram/WITH_BMM_INFO.SP.SIMPLE_PRIM36.ram)| 158   |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -1
+
+   Minimum period: 3.419ns (Maximum Frequency: 292.483MHz)
+   Minimum input arrival time before clock: 2.946ns
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 3.419ns (frequency: 292.483MHz)
+  Total number of paths / destination ports: 3045 / 382
+-------------------------------------------------------------------------
+Delay:               3.419ns (Levels of Logic = 32)
+  Source:            n_cnt_2 (FF)
+  Destination:       n_cnt_31 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: n_cnt_2 to n_cnt_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              4   0.478   0.419  n_cnt_2 (n_cnt_2)
+     INV:I->O              1   0.146   0.000  Madd_n_cnt[31]_GND_6_o_add_17_OUT_lut<2>_INV_0 (Madd_n_cnt[31]_GND_6_o_add_17_OUT_lut<2>)
+     MUXCY:S->O            1   0.472   0.000  Madd_n_cnt[31]_GND_6_o_add_17_OUT_cy<2> (Madd_n_cnt[31]_GND_6_o_add_17_OUT_cy<2>)
+     MUXCY:CI->O           1   0.029   0.000  Madd_n_cnt[31]_GND_6_o_add_17_OUT_cy<3> (Madd_n_cnt[31]_GND_6_o_add_17_OUT_cy<3>)
+     MUXCY:CI->O           1   0.029   0.000  Madd_n_cnt[31]_GND_6_o_add_17_OUT_cy<4> (Madd_n_cnt[31]_GND_6_o_add_17_OUT_cy<4>)
+     MUXCY:CI->O           1   0.029   0.000  Madd_n_cnt[31]_GND_6_o_add_17_OUT_cy<5> (Madd_n_cnt[31]_GND_6_o_add_17_OUT_cy<5>)
+     MUXCY:CI->O           1   0.029   0.000  Madd_n_cnt[31]_GND_6_o_add_17_OUT_cy<6> (Madd_n_cnt[31]_GND_6_o_add_17_OUT_cy<6>)
+     MUXCY:CI->O           1   0.029   0.000  Madd_n_cnt[31]_GND_6_o_add_17_OUT_cy<7> (Madd_n_cnt[31]_GND_6_o_add_17_OUT_cy<7>)
+     MUXCY:CI->O           1   0.029   0.000  Madd_n_cnt[31]_GND_6_o_add_17_OUT_cy<8> (Madd_n_cnt[31]_GND_6_o_add_17_OUT_cy<8>)
+     MUXCY:CI->O           1   0.029   0.000  Madd_n_cnt[31]_GND_6_o_add_17_OUT_cy<9> (Madd_n_cnt[31]_GND_6_o_add_17_OUT_cy<9>)
+     MUXCY:CI->O           1   0.029   0.000  Madd_n_cnt[31]_GND_6_o_add_17_OUT_cy<10> (Madd_n_cnt[31]_GND_6_o_add_17_OUT_cy<10>)
+     MUXCY:CI->O           1   0.029   0.000  Madd_n_cnt[31]_GND_6_o_add_17_OUT_cy<11> (Madd_n_cnt[31]_GND_6_o_add_17_OUT_cy<11>)
+     MUXCY:CI->O           1   0.029   0.000  Madd_n_cnt[31]_GND_6_o_add_17_OUT_cy<12> (Madd_n_cnt[31]_GND_6_o_add_17_OUT_cy<12>)
+     MUXCY:CI->O           1   0.029   0.000  Madd_n_cnt[31]_GND_6_o_add_17_OUT_cy<13> (Madd_n_cnt[31]_GND_6_o_add_17_OUT_cy<13>)
+     MUXCY:CI->O           1   0.029   0.000  Madd_n_cnt[31]_GND_6_o_add_17_OUT_cy<14> (Madd_n_cnt[31]_GND_6_o_add_17_OUT_cy<14>)
+     MUXCY:CI->O           1   0.029   0.000  Madd_n_cnt[31]_GND_6_o_add_17_OUT_cy<15> (Madd_n_cnt[31]_GND_6_o_add_17_OUT_cy<15>)
+     MUXCY:CI->O           1   0.029   0.000  Madd_n_cnt[31]_GND_6_o_add_17_OUT_cy<16> (Madd_n_cnt[31]_GND_6_o_add_17_OUT_cy<16>)
+     MUXCY:CI->O           1   0.029   0.000  Madd_n_cnt[31]_GND_6_o_add_17_OUT_cy<17> (Madd_n_cnt[31]_GND_6_o_add_17_OUT_cy<17>)
+     MUXCY:CI->O           1   0.029   0.000  Madd_n_cnt[31]_GND_6_o_add_17_OUT_cy<18> (Madd_n_cnt[31]_GND_6_o_add_17_OUT_cy<18>)
+     MUXCY:CI->O           1   0.029   0.000  Madd_n_cnt[31]_GND_6_o_add_17_OUT_cy<19> (Madd_n_cnt[31]_GND_6_o_add_17_OUT_cy<19>)
+     MUXCY:CI->O           1   0.029   0.000  Madd_n_cnt[31]_GND_6_o_add_17_OUT_cy<20> (Madd_n_cnt[31]_GND_6_o_add_17_OUT_cy<20>)
+     MUXCY:CI->O           1   0.029   0.000  Madd_n_cnt[31]_GND_6_o_add_17_OUT_cy<21> (Madd_n_cnt[31]_GND_6_o_add_17_OUT_cy<21>)
+     MUXCY:CI->O           1   0.029   0.000  Madd_n_cnt[31]_GND_6_o_add_17_OUT_cy<22> (Madd_n_cnt[31]_GND_6_o_add_17_OUT_cy<22>)
+     MUXCY:CI->O           1   0.029   0.000  Madd_n_cnt[31]_GND_6_o_add_17_OUT_cy<23> (Madd_n_cnt[31]_GND_6_o_add_17_OUT_cy<23>)
+     MUXCY:CI->O           1   0.029   0.000  Madd_n_cnt[31]_GND_6_o_add_17_OUT_cy<24> (Madd_n_cnt[31]_GND_6_o_add_17_OUT_cy<24>)
+     MUXCY:CI->O           1   0.029   0.000  Madd_n_cnt[31]_GND_6_o_add_17_OUT_cy<25> (Madd_n_cnt[31]_GND_6_o_add_17_OUT_cy<25>)
+     MUXCY:CI->O           1   0.029   0.000  Madd_n_cnt[31]_GND_6_o_add_17_OUT_cy<26> (Madd_n_cnt[31]_GND_6_o_add_17_OUT_cy<26>)
+     MUXCY:CI->O           1   0.029   0.000  Madd_n_cnt[31]_GND_6_o_add_17_OUT_cy<27> (Madd_n_cnt[31]_GND_6_o_add_17_OUT_cy<27>)
+     MUXCY:CI->O           1   0.029   0.000  Madd_n_cnt[31]_GND_6_o_add_17_OUT_cy<28> (Madd_n_cnt[31]_GND_6_o_add_17_OUT_cy<28>)
+     MUXCY:CI->O           1   0.029   0.000  Madd_n_cnt[31]_GND_6_o_add_17_OUT_cy<29> (Madd_n_cnt[31]_GND_6_o_add_17_OUT_cy<29>)
+     MUXCY:CI->O           0   0.029   0.000  Madd_n_cnt[31]_GND_6_o_add_17_OUT_cy<30> (Madd_n_cnt[31]_GND_6_o_add_17_OUT_cy<30>)
+     XORCY:CI->O           1   0.510   0.421  Madd_n_cnt[31]_GND_6_o_add_17_OUT_xor<31> (n_cnt[31]_GND_6_o_add_17_OUT<31>)
+     LUT2:I1->O            1   0.124   0.000  Mmux_n_cnt[31]_GND_6_o_mux_19_OUT251 (n_cnt[31]_GND_6_o_mux_19_OUT<31>)
+     FDCE:D                    0.030          n_cnt_31
+    ----------------------------------------
+    Total                      3.419ns (2.579ns logic, 0.840ns route)
+                                       (75.4% logic, 24.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 1426 / 87
+-------------------------------------------------------------------------
+Offset:              2.946ns (Levels of Logic = 13)
+  Source:            n<5> (PAD)
+  Destination:       n_cnt_28 (FF)
+  Destination Clock: clk rising
+
+  Data Path: n<5> to n_cnt_28
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.001   0.939  n_5_IBUF (n_5_IBUF)
+     LUT6:I0->O            1   0.124   0.000  Mcompar_n_cnt[31]_n[31]_equal_19_o_lut<1> (Mcompar_n_cnt[31]_n[31]_equal_19_o_lut<1>)
+     MUXCY:S->O            1   0.472   0.000  Mcompar_n_cnt[31]_n[31]_equal_19_o_cy<1> (Mcompar_n_cnt[31]_n[31]_equal_19_o_cy<1>)
+     MUXCY:CI->O           1   0.029   0.000  Mcompar_n_cnt[31]_n[31]_equal_19_o_cy<2> (Mcompar_n_cnt[31]_n[31]_equal_19_o_cy<2>)
+     MUXCY:CI->O           1   0.029   0.000  Mcompar_n_cnt[31]_n[31]_equal_19_o_cy<3> (Mcompar_n_cnt[31]_n[31]_equal_19_o_cy<3>)
+     MUXCY:CI->O           1   0.029   0.000  Mcompar_n_cnt[31]_n[31]_equal_19_o_cy<4> (Mcompar_n_cnt[31]_n[31]_equal_19_o_cy<4>)
+     MUXCY:CI->O           1   0.029   0.000  Mcompar_n_cnt[31]_n[31]_equal_19_o_cy<5> (Mcompar_n_cnt[31]_n[31]_equal_19_o_cy<5>)
+     MUXCY:CI->O           1   0.029   0.000  Mcompar_n_cnt[31]_n[31]_equal_19_o_cy<6> (Mcompar_n_cnt[31]_n[31]_equal_19_o_cy<6>)
+     MUXCY:CI->O           1   0.029   0.000  Mcompar_n_cnt[31]_n[31]_equal_19_o_cy<7> (Mcompar_n_cnt[31]_n[31]_equal_19_o_cy<7>)
+     MUXCY:CI->O           1   0.029   0.000  Mcompar_n_cnt[31]_n[31]_equal_19_o_cy<8> (Mcompar_n_cnt[31]_n[31]_equal_19_o_cy<8>)
+     MUXCY:CI->O           1   0.029   0.000  Mcompar_n_cnt[31]_n[31]_equal_19_o_cy<9> (Mcompar_n_cnt[31]_n[31]_equal_19_o_cy<9>)
+     MUXCY:CI->O          30   0.334   0.688  Mcompar_n_cnt[31]_n[31]_equal_19_o_cy<10> (n_cnt[31]_n[31]_equal_19_o)
+     LUT2:I0->O            1   0.124   0.000  Mmux_n_cnt[31]_GND_6_o_mux_19_OUT251 (n_cnt[31]_GND_6_o_mux_19_OUT<31>)
+     FDCE:D                    0.030          n_cnt_31
+    ----------------------------------------
+    Total                      2.946ns (1.319ns logic, 1.627ns route)
+                                       (44.8% logic, 55.2% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    3.419|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 23.00 secs
+Total CPU time to Xst completion: 23.78 secs
+ 
+--> 
+
+Total memory usage is 434584 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  176 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+

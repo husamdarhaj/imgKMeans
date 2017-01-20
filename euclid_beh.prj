@@ -1,0 +1,4 @@
+vhdl work "ipcore_dir/sqrt.vhd"
+vhdl work "ipcore_dir/sqrt2.vhd"
+vhdl work "ipcore_dir/sqrt3.vhd"
+vhdl work "euclid.vhd"

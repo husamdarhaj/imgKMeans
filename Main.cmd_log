@@ -1,0 +1,31 @@
+xst -intstyle ise -ifn "C:/Users/husamhaj/Desktop/Personal Projects/KMeans_img/Main.xst" -ofn "C:/Users/husamhaj/Desktop/Personal Projects/KMeans_img/Main.syr" 
+xst -intstyle ise -ifn "C:/Users/husamhaj/Desktop/Personal Projects/KMeans_img/Main.xst" -ofn "C:/Users/husamhaj/Desktop/Personal Projects/KMeans_img/Main.syr" 
+xst -intstyle ise -ifn "C:/Users/husamhaj/Desktop/Personal Projects/KMeans_img/Main.xst" -ofn "C:/Users/husamhaj/Desktop/Personal Projects/KMeans_img/Main.syr" 
+xst -intstyle ise -ifn "C:/Users/husamhaj/Desktop/Personal Projects/KMeans_img/Main.xst" -ofn "C:/Users/husamhaj/Desktop/Personal Projects/KMeans_img/Main.syr" 
+xst -intstyle ise -ifn "C:/Users/husamhaj/Desktop/Personal Projects/KMeans_img/Main.xst" -ofn "C:/Users/husamhaj/Desktop/Personal Projects/KMeans_img/Main.syr" 
+xst -intstyle ise -ifn "C:/Users/husamhaj/Desktop/Personal Projects/KMeans_img/Main.xst" -ofn "C:/Users/husamhaj/Desktop/Personal Projects/KMeans_img/Main.syr" 
+xst -intstyle ise -ifn "C:/Users/husamhaj/Desktop/Personal Projects/KMeans_img/Main.xst" -ofn "C:/Users/husamhaj/Desktop/Personal Projects/KMeans_img/Main.syr" 
+xst -intstyle ise -ifn "C:/Users/husamhaj/Desktop/Personal Projects/KMeans_img/Main.xst" -ofn "C:/Users/husamhaj/Desktop/Personal Projects/KMeans_img/Main.syr" 
+xst -intstyle ise -ifn "C:/Users/husamhaj/Desktop/Personal Projects/KMeans_img/Main.xst" -ofn "C:/Users/husamhaj/Desktop/Personal Projects/KMeans_img/Main.syr" 
+xst -intstyle ise -ifn "C:/Users/husamhaj/Desktop/Personal Projects/KMeans_img/Main.xst" -ofn "C:/Users/husamhaj/Desktop/Personal Projects/KMeans_img/Main.syr" 
+xst -intstyle ise -ifn "C:/Users/husamhaj/Desktop/Personal Projects/KMeans_img/Main.xst" -ofn "C:/Users/husamhaj/Desktop/Personal Projects/KMeans_img/Main.syr" 
+xst -intstyle ise -ifn "C:/Users/husamhaj/Desktop/Personal Projects/KMeans_img/Main.xst" -ofn "C:/Users/husamhaj/Desktop/Personal Projects/KMeans_img/Main.syr" 
+xst -intstyle ise -ifn "C:/Users/husamhaj/Desktop/Personal Projects/KMeans_img/Main.xst" -ofn "C:/Users/husamhaj/Desktop/Personal Projects/KMeans_img/Main.syr" 
+xst -intstyle ise -ifn "C:/Users/husamhaj/Desktop/Personal Projects/KMeans_img/Main.xst" -ofn "C:/Users/husamhaj/Desktop/Personal Projects/KMeans_img/Main.syr" 
+xst -intstyle ise -ifn "C:/Users/husamhaj/Desktop/Personal Projects/KMeans_img/Main.xst" -ofn "C:/Users/husamhaj/Desktop/Personal Projects/KMeans_img/Main.syr" 
+xst -intstyle ise -ifn "C:/Users/husamhaj/Desktop/Personal Projects/KMeans_img/Main.xst" -ofn "C:/Users/husamhaj/Desktop/Personal Projects/KMeans_img/Main.syr" 
+xst -intstyle ise -ifn "C:/Users/husamhaj/Desktop/Personal Projects/KMeans_img/Main.xst" -ofn "C:/Users/husamhaj/Desktop/Personal Projects/KMeans_img/Main.syr" 
+xst -intstyle ise -ifn "C:/Users/husamhaj/Desktop/Personal Projects/KMeans_img/Main.xst" -ofn "C:/Users/husamhaj/Desktop/Personal Projects/KMeans_img/Main.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -i -p xc7a100t-csg324-1 "Main.ngc" Main.ngd  
+map -intstyle ise -p xc7a100t-csg324-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o Main_map.ncd Main.ngd Main.pcf 
+xst -intstyle ise -ifn "C:/Users/husamhaj/Desktop/Personal Projects/KMeans_img/Main.xst" -ofn "C:/Users/husamhaj/Desktop/Personal Projects/KMeans_img/Main.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -i -p xc7a100t-csg324-1 "Main.ngc" Main.ngd  
+map -intstyle ise -p xc7a100t-csg324-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o Main_map.ncd Main.ngd Main.pcf 
+par -w -intstyle ise -ol high -mt off Main_map.ncd Main.ncd Main.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml Main.twx Main.ncd -o Main.twr Main.pcf 
+netgen -intstyle ise -s 1  -pcf Main.pcf -rpw 100 -tpw 0 -ar Structure -tm Main -insert_pp_buffers true -w -dir netgen/par -ofmt vhdl -sim Main.ncd Main_timesim.vhd 
+xst -intstyle ise -ifn "C:/Users/husamhaj/Desktop/Personal Projects/KMeans_img/Main.xst" -ofn "C:/Users/husamhaj/Desktop/Personal Projects/KMeans_img/Main.syr" 
+xst -intstyle ise -ifn "C:/Users/husamhaj/Desktop/Personal Projects/KMeans_img/Main.xst" -ofn "C:/Users/husamhaj/Desktop/Personal Projects/KMeans_img/Main.syr" 
+xst -intstyle ise -ifn "C:/Users/husamhaj/Desktop/Personal Projects/KMeans_img/Main.xst" -ofn "C:/Users/husamhaj/Desktop/Personal Projects/KMeans_img/Main.syr" 
+xst -intstyle ise -ifn "C:/Users/husamhaj/Desktop/Personal Projects/KMeans_img/Main.xst" -ofn "C:/Users/husamhaj/Desktop/Personal Projects/KMeans_img/Main.syr" 
+xst -intstyle ise -ifn "C:/Users/husamhaj/Desktop/Personal Projects/KMeans_img/Main.xst" -ofn "C:/Users/husamhaj/Desktop/Personal Projects/KMeans_img/Main.syr" 

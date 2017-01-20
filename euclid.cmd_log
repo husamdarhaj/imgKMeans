@@ -1,0 +1,2 @@
+vhdtdtfi -prj KMeans_img -o "C:/Users/husamhaj/Desktop/Personal Projects/KMeans_img/euclid.vhi" -module euclid -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work ipcore_dir/sqrt.vhd -lib work euclid.vhd 
+vhdtdtfi -prj KMeans_img -o "C:/Users/husamhaj/Desktop/Personal Projects/KMeans_img/euclid.vhi" -module euclid -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work ipcore_dir/sqrt.vhd -lib work ipcore_dir/sqrt2.vhd -lib work ipcore_dir/sqrt3.vhd -lib work euclid.vhd 

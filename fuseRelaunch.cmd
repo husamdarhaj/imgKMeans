@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "C:/Users/husamhaj/Desktop/Personal Projects/KMeans_img/euclid_isim_beh.exe" -prj "C:/Users/husamhaj/Desktop/Personal Projects/KMeans_img/euclid_beh.prj" "work.euclid" 

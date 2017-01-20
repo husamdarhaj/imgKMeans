@@ -1,0 +1,5 @@
+vhdl work "ipcore_dir/RGB_Ram.vhd"
+vhdl work "ipcore_dir/cntrd_ram.vhd"
+vhdl work "ipcore_dir/sqrt.vhd"
+vhdl work "euclid.vhd"
+vhdl work "Main.vhd"

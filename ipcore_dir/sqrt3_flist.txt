@@ -1,0 +1,16 @@
+# Output products list for <sqrt3>
+_xmsgs\pn_parser.xmsgs
+demo_tb\tb_sqrt3.vhd
+sqrt3.asy
+sqrt3.gise
+sqrt3.ngc
+sqrt3.sym
+sqrt3.vhd
+sqrt3.vho
+sqrt3.xco
+sqrt3.xise
+sqrt3\doc\cordic_v5_0_readme.txt
+sqrt3\doc\cordic_v5_0_vinfo.html
+sqrt3\doc\ds858_cordic.pdf
+sqrt3_flist.txt
+sqrt3_xmdf.tcl

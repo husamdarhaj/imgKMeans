@@ -1,0 +1,29 @@
+Command line:
+   euclid_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  56205
+
+Thu Jan 19 02:40:14 2017
+
+
+ Elaboration Time: 0.3125 sec
+
+ Current Memory Usage: 1507.4 Meg
+
+ Total Signals          : 629
+ Total Nets             : 3330
+ Total Signal Drivers   : 289
+ Total Blocks           : 151
+ Total Primitive Blocks : 99
+ Total Processes        : 261
+ Total Traceable Variables  : 648
+ Total Scalar Nets and Variables : 57821
+Total Line Count : 361
+
+ Total Simulation Time: 0.34375 sec
+
+ Current Memory Usage: 878.219 Meg
+
+Thu Jan 19 02:49:03 2017
+

@@ -1,0 +1,41 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib secureip -o C:/Users/husamhaj/Desktop/Personal Projects/KMeans_img/euclid_isim_beh.exe -prj C:/Users/husamhaj/Desktop/Personal Projects/KMeans_img/euclid_beh.prj work.euclid 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Parsing VHDL file "C:/Users/husamhaj/Desktop/Personal Projects/KMeans_img/ipcore_dir/sqrt.vhd" into library work
+Parsing VHDL file "C:/Users/husamhaj/Desktop/Personal Projects/KMeans_img/ipcore_dir/sqrt2.vhd" into library work
+Parsing VHDL file "C:/Users/husamhaj/Desktop/Personal Projects/KMeans_img/ipcore_dir/sqrt3.vhd" into library work
+Parsing VHDL file "C:/Users/husamhaj/Desktop/Personal Projects/KMeans_img/euclid.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package std_logic_arith
+Compiling package std_logic_signed
+Compiling package numeric_std
+Compiling package textio
+Compiling package bip_utils_pkg_v2_0
+Compiling package xbip_pipe_v2_0_xst_comp
+Compiling package axi_utils_pkg_v1_1
+Compiling package math_real
+Compiling package global_util_pkg_v1_1
+Compiling package axi_utils_v1_1_comps
+Compiling package mult_gen_pkg_v11_0
+Compiling package cordic_v5_0_pack
+Compiling package cordic_v5_0_comps
+Compiling package xbip_pipe_v2_0_comp
+Compiling architecture behavioral of entity xbip_pipe_v2_0 [\xbip_pipe_v2_0(0,1,0,0,0,0,0,"0...]
+Compiling architecture behavioral of entity xbip_pipe_v2_0_xst [\xbip_pipe_v2_0_xst(0,1,0,0,0,0,...]
+Compiling architecture behavioral of entity cordic_v5_0_behv [\cordic_v5_0_behv(2,6,0,2,"virte...]
+Compiling architecture behavioral of entity cordic_v5_0 [\cordic_v5_0(2,6,0,2,"artix7",0,...]
+Compiling architecture sqrt_a of entity sqrt [sqrt_default]
+Compiling architecture sqrt2_a of entity sqrt2 [sqrt2_default]
+Compiling architecture sqrt3_a of entity sqrt3 [sqrt3_default]
+Compiling architecture behavioral of entity euclid
+Time Resolution for simulation is 1ps.
+Waiting for 14 sub-compilation(s) to finish...
+Compiled 31 VHDL Units
+Built simulation executable C:/Users/husamhaj/Desktop/Personal Projects/KMeans_img/euclid_isim_beh.exe
+Fuse Memory Usage: 48192 KB
+Fuse CPU Usage: 1483 ms
